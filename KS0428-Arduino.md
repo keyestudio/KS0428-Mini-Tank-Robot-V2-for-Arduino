@@ -372,8 +372,7 @@ Now, you import libraries successfully.
 
 The whole project begins with basic programs. Starting from simple to complex,
 the lessons will guide you to assemble the robot car and absorb the knowledge of
-electronic and machinery step by step. I reckon that you could hardly sit still
-and itch to have a go now. Let’s get started.
+electronic and machinery step by step. **If you want to start directly by installing the robot, you can skip to our [last project](https://ks0428-mini-tank-robot-v2-for-arduino.readthedocs.io/en/latest/KS0428_arduino.html#the-final-fully-functional-project).**
 
 ![IMG_256](media/b136b7a4b51302f3c58574b17370eae7.jpeg)
 
