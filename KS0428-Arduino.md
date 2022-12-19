@@ -4672,6 +4672,9 @@ corresponding pattern.
 
 ### Assembly Guide
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ES0wFdEsX4M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 After checking all the parts in this kit, we need to mount the tank robot. Let’s
 install the smart car in compliance with the following instructions.
 
