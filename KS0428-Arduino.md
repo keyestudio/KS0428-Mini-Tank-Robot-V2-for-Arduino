@@ -134,277 +134,9 @@ components.
 | 7                    | 8MM Winding Pipe                                | 12CM | ![](media/aa11fd369435227b9125d88f22ea4028.png)                                      |
 | 8                    | Decorative Cardboard                            | 1    | ![](media/d719fafc448a840b97d566a72a128c4a.png)                                      |
 
-## 5.Assembly Guide
 
-After checking all the parts in this kit, we need to mount the tank robot. Let’s
-install the smart car in compliance with the following instructions.
 
-**Note: Peel the plastic film off the board first when installing smart car.**
-
-Step 1: Install Bottom Motor
-
-Prepare the parts as follows:
-
--   M4 Nut \* 2
-
--   Metal Motor \*2
-
--   Metal Holder \*2
-
--   Copper Coupler \*2
-
--   Blue Supportive Parts \*2
-
--   M4\*12MM Inner Hex Screw \* 2
-
--   M1.5 Hex Key Nickel Plated Allen Wrench \*1
-
--   M3 Hex Key Nickel Plated Allen Wrench \*1
-
--   M2.5 Hex Key Nickel Plated Allen Wrench \*1
-
--   M3\*8MM Inner Hex Screw \* 4
-
-![](media/9813573b7992155d4be653f03a27c851.png)![](media/2027ea2890822d6f22db89dfa69efcc5.png)![](media/9f9048e1ad89fa5cfe85d0f62e728387.png)
-
-Step 2: Install Driver Wheel
-
-Prepare the parts as follows:
-
--   M4\*12MM Inner Hex Screw \* 2
-
--   M4\*50MM Inner Hex Screw \* 2
-
--   Tank Load-bearing Wheel \* 2
-
--   Flange Bearing \* 4
-
--   Copper Bush \*2
-
--   Caterpillar Band \*2
-
--   M4 Self-locking Nut \* 2
-
--   M3 Hex Key Nickel Plated Allen Wrench \*1
-
-![](media/d9c59c894110ce30d9d39bbadc866793.png)![](media/e73ffe5ae70d53c5a750a6948a93816d.png)![](media/65d417a5b9135fae7e3bcca041624445.png)
-
-Step 3: Install the Battery Holder
-
-Prepare the parts as follows:
-
--   Battery Holder \*1
-
--   M3 Nut \* 2
-
--   Blue Metal holder \*2
-
--   M4 Nut \*8
-
--   M3\*10MM Flat Head Screw \* 2
-
--   M4\*40MM Inner Hex Screw \*4
-
--   M2.5 Hex Key Nickel Plated Allen Wrench\*1
-
--   M3 Hex Key Nickel Plated Allen Wrench \*1
-
--   M3\*25MM Inner Hex Screw \*4
-
-![](media/e4668f1f47bf9f514217f6ebe818d2ba.png)
-
-Move to fix the metal holder on the motor wheel with four M4\*40MM inner hex
-screws and four M4 nuts when the mounting process is completed.
-
-![](media/2584211e5037ac00559c3d3b01c5bac2.png)
-
-![](media/d763b76d99dcae8d25c0e8f7190006f5.png)![](media/b5dcec9193e5ceedbb1f038e69d9d544.png)
-
-Step 4: Mount Acrylic Board and Sensors
-
--   Acrylic Board \* 2
-
--   L- type Black Bracket \*1
-
--   Photocell Sensor \*2
-
--   IR Receiver Module \*1
-
--   8X16 LED Panel \*1
-
--   M2 Nut \*4
-
--   M3 Nut \*10
-
--   M3\*6MM Inner Hex Screw \* 8
-
--   M2.5 Hex Key Allen Wrench \*1
-
--   M3\*12MM Round Head Screw \*7
-
--   M3\*10MM Hexagon Copper Bush \*8
-
--   M2\*10MM Round Head Screw \* 4
-
-![6](media/ff92e5f5b82a79be5a2a956b621e99b3.jpeg)![1](media/16bf6867f9e91cd1381e6f90d2949bb1.jpeg)![2](media/f59d4877bc002ef3a173ef2f3e042910.jpeg)![3](media/e9f8630c8de6c1b6141a430badf865db.jpeg)
-
-Step 5: Install the Servo Platform
-
-Prepare the parts as follows:
-
--   Servo \*1
-
--   Black Gimbal \*1
-
--   Cable Tie \*2
-
--   M2x8 Round Head Cross Tapping Screw \*2
-
--   Ultrasonic Sensor \*1
-
--   M2\*4 Screw \*1
-
--   M1.2\*5 Screw \*4
-
-Note: for convenient debugging, keep the ultrasonic module straight ahead and
-the angle of servo motor at 90°. Therefore, we need to set the servo to 90°
-before installing the servo platform.
-
-Code:
-
-/\*
-
-Set the 90-degree code,Copy the code and upload it to the development board. The
-steering gear connected to port D9 will rotate to 90 °
-
-\*/
-
-    \#define servoPin 9 //servo Pin
-
-    int pos; //the angle variable of servo
-
-    int pulsewidth; // pulse width variable of servo
-
-    void setup() {
-
-    pinMode(servoPin, OUTPUT); //set servo pin to OUTPUT
-
-    procedure(0); //set the angle of servo to 0°
-
-    }
-
-    void loop() {
-
-    procedure(90); // tell servo to go to position in variable 90°
-
-    }
-
-    // function to control servo
-
-    void procedure(int myangle) {
-
-    pulsewidth = myangle \* 11 + 500; //calculate the value of pulse width
-
-    digitalWrite(servoPin,HIGH);
-
-    delayMicroseconds(pulsewidth); //The duration of high level is pulse width
-
-    digitalWrite(servoPin,LOW);
-
-    delay((20 - pulsewidth / 1000)); // the cycle is 20ms, the low level last for
-    the rest of time
-
-    }
-
-![超声波](media/9d29c7f9af30af65704c08d71eda3072.png)
-
-![IMG_256](media/2a699a839b28414fc3f4c2e290f90384.png)
-
-Note:You can find M1.2\*5 Screws inside the bag of Plastic Platform
-
-![%}_ZCT\~2%4IIRCYCLSCJQ%C](media/67bf78a0c063743de833674c9ca9b25d.png)
-
-Step 6: Install Sensors and Boards
-
-Prepare the parts as follows:
-
--   M3\*6MM Round Head Screw \*12
-
--   L298P Shield \*1
-
--   V4.0 Board \*1
-
--   V5 Sensor Shield \*1
-
--   Screwdriver \*1
-
--   Bluetooth Module \*1
-
-![4](media/1beac6059f40b6eca748fc6dca13efaf.jpeg)![7](media/9a5d6f464a4c682caa0edd65b5b573ae.jpeg)![8](media/51b702d905ef099b80984b7a36e5486f.jpeg)![9](media/298d2464b13d685888746d8bc68c3a99.jpeg)![10](media/2573f2ee9a26a451278c31f4bb6e3524.jpeg)
-
-Step 7: Hook-up Guide
-
-![C:\\Users\\Admin\\Desktop\\KS0428接线\\ks0428 电机接线.jpgks0428
-电机接线](media/d35ffe6c0c275548f40bcafb42a93da1.jpeg)
-
-![C:\\Users\\Admin\\Desktop\\KS0428接线\\左电机-2.jpg左电机-2](media/9e02d1246e5ee76f004bba18685069fe.jpeg)
-
-![C:\\Users\\Admin\\Desktop\\KS0428接线\\右电机.jpg右电机](media/dda62c2ba6d1e994f8029339c249e12e.jpeg)
-
-![C:\\Users\\Admin\\Desktop\\KS0428接线\\电池盒-2.jpg电池盒-2](media/efa2b5b60a43cbdb7b06abeb543e35e5.jpeg)
-
-![C:\\Users\\Admin\\Desktop\\KS0428接线\\屏幕截图 2021-03-29 142503.jpg屏幕截图
-2021-03-29 142503](media/2581b78ddf53a9d94655bf09a503aaaf.jpeg)
-
-Step 8: Wire Up LED Panel
-
-![C:\\Users\\Admin\\Desktop\\KS0428接线\\矩阵LED-1.jpg矩阵LED-1](media/979e42393d123e86427aba670300740e.jpeg)![C:\\Users\\Admin\\Desktop\\KS0428接线\\矩阵LED.jpg矩阵LED](media/2394590b9f127167cdbce26c939afd91.jpeg)![C:\\Users\\Admin\\Desktop\\KS0428接线\\矩阵LED-2.jpg矩阵LED-2](media/87f1ff9241f145316d04a4072ba45df0.jpeg)
-
-| LED Panel                                                                                                     | V5 Sensor Shield                                                                                                  |
-|---------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
-| GND                                                                                                           | -(GND)                                                                                                            |
-| VCC                                                                                                           | +(VCC)                                                                                                            |
-| SDA                                                                                                           | SDA                                                                                                               |
-| SCL                                                                                                           | SCL                                                                                                               |
-| ![C:\\Users\\Admin\\Desktop\\KS0428接线\\矩阵LED-1.jpg矩阵LED-1](media/979e42393d123e86427aba670300740e.jpeg) | ![C:\\Users\\Admin\\Desktop\\KS0428接线\\矩阵LED接线.jpg矩阵LED接线](media/a17825552bd0275e895c66be0b2a3efe.jpeg) |
-
-Step 9: Install all parts of Acrylic plate
-
-![30](media/5bf9cf95040ef56217c2a5a77f059eed.png)
-
-![C:\\Users\\Admin\\Desktop\\KS0428接线\\红外接收.jpg红外接收](media/fc4ff9fa6898d37c816a0c23dbd7efed.jpeg)
-
-![](media/fa285243c644ca7481c947e94ddb8bd8.png)
-
-![31](media/30d77c9f512c64d65352e049b134f7c0.png)
-
-![C:\\Users\\Admin\\Desktop\\KS0428接线\\左光敏.jpg左光敏](media/17a7c2181ccedd6fc6995f1b09276a9b.jpeg)
-
-![C:\\Users\\Admin\\Desktop\\KS0428接线\\右光敏.jpg右光敏](media/e791938575d9f5ce64437a91b5b62ed9.jpeg)
-
-![](media/359345b00db31ba06827e98c1087ad42.png)
-
-![32](media/6385938690deb8eb33763951019169c5.png)
-
-![WKMC[Q\~PENE12H_OT8YNLMG](media/ac0f66f45148fc48d5bca4a208b2b384.png)
-
-![RWRX_I3@Y50R_\`HDQKVLC@6](media/316ab1f1dc16a1178b78fa6c01508357.png)
-
-![C:\\Users\\Admin\\Desktop\\KS0428接线\\屏幕截图 2021-03-26 085002.jpg屏幕截图
-2021-03-26 085002](media/466f5502689d16c6e59963a542d2a59e.jpeg)
-
-![33](media/78a6fe318789e9b9bf7f1af349c1bb70.jpeg)
-
-![](media/78dd3d5dfe9902fc82acb8dc83d63dee.png)
-
-Step 10: Tank Robot
-
-Note: Remove the Bluetooth module before uploading test code. Otherwise, you
-will fail to upload test code.
-
-![KS0428](media/f89eeea3bebb72d7a0829faed1774e22.png)
-
-## **5. Install Arduino IDE and Driver**
+## 5.Install Arduino IDE and Driver
 
 ### **Installing Arduino IDE**
 
@@ -605,7 +337,7 @@ Click![](media/9c9158a5d49baa740ea2f0048f655017.png)to upload the program, uploa
 
 Upload the program successfully, the onboard LED lights on for 1s, lights off for 1s. Congratulation, you have finished the first program.
 
-## **6. How to Add Libraries?**
+## 6. How to Add Libraries?
 
 **What are Libraries ?**
 
@@ -636,7 +368,7 @@ Import the library. You can find it in the include library list.
 
 Now, you import libraries successfully.
 
-## 8.Projects
+## 7.Projects
 
 The whole project begins with basic programs. Starting from simple to complex,
 the lessons will guide you to assemble the robot car and absorb the knowledge of
@@ -649,7 +381,7 @@ Note: (G), marked on each sensor and module, is negative pole and connected to
 “G”, ”-”or “GND”on the sensor shield and control board ; (V) is positive pole
 and linked with V , VCC, + or 5V on the sensor shield or control board.
 
-**Project 1: LED Blink**
+### Project 1: LED Blink
 
 ![图片1](media/4c5aa10c3eda7ed4c970b514f5d08da4.png)
 
@@ -799,7 +531,7 @@ We’ve altered pins and connected LED to D10.
 The test result shows that the LED flashes faster. Therefore, we can draw a
 conclusion that pins and time delaying affect flash frequency.
 
-**Project 2: Adjust LED Brightness**
+### **Project 2: Adjust LED Brightness**
 
 1.  **Description**
 
@@ -1196,7 +928,7 @@ PWM restrains the brightness, so LED is linked with PWM pins. Connect LED to pin
 
 Upload code, press it by hand to observe the LED brightness.
 
-**Project 4: Servo Control**
+### **Project 4: Servo Control**
 
 ![IMG_256](media/ae51208a3f560ad6edefe370eb588c13.png)
 
@@ -1711,7 +1443,7 @@ to the D10 pin.
 Upload test code to development board and block ultrasonic sensor by hand, then
 check if LED is on
 
-**Project 6: IR Reception**
+### **Project 6: IR Reception**
 
 1.  **Description**
 
@@ -1934,7 +1666,7 @@ then press the keys of remote control to make LED light on and off.
 Upload code to development board, press“OK”key on remote control to make LED on
 and off.
 
-**Project 7: Bluetooth Remote Control**
+### **Project 7: Bluetooth Remote Control**
 
 1.  **Description**
 
@@ -2185,9 +1917,9 @@ Click“Write”on APP, when you enter 1, LED will be on; when you input 0, LED 
 be off. (Remember to remove the Bluetooth module after finishing experiment,
 otherwise, code-burning will be affected)
 
-**Project 8: Motor Driving and Speed Control**
+### Project 8: Motor Driving and Speed Control
 
-**(1) Description**
+**Description**
 
 ![](media/705bf5838ebbe325e6861dcf278ff3c0.png)
 
@@ -2202,7 +1934,7 @@ We designed a shield based on the circuit of L298p.
 The stacked design reduces the technical difficulty of using and driving the
 motor.
 
-1.  **Specification**
+**Specification**
 
 Circuit Diagram for L298P Board
 
@@ -2479,7 +2211,7 @@ Adjust the speed that PWM controls the motor, and hook up in the same way.
 
 Upload code successfully, the motors rotate faster.
 
-### Project 9: 8\*16 LED Board
+### Project 9: 8*16 LED Board
 
 1.  **Description**
 
@@ -3232,7 +2964,7 @@ port 4.
 Upload code on keyestudio V4.0 development board, DIP switch is dialed to right
 end and power on, the smart robot follows light to move.
 
-**Project 11: Ultrasonic Avoiding Tank**
+### **Project 11: Ultrasonic Avoiding Tank**
 
 ![](media/a25b9ad6fd5992837a9a716fdb96de9f.png)
 
@@ -4937,11 +4669,283 @@ control，tap![Screenshot_2019-06-21-14-48-54-58](media/89977c8a260abc7a1e433480
 end gravitational control. At same time,8X16 LED panel on robot car displays the
 corresponding pattern.
 
-### Project 15: Multi-purpose Robot Car
+## 8.The final fully functional project
+
+### Assembly Guide
+
+After checking all the parts in this kit, we need to mount the tank robot. Let’s
+install the smart car in compliance with the following instructions.
+
+**Note: Peel the plastic film off the board first when installing smart car.**
+
+Step 1: Install Bottom Motor
+
+Prepare the parts as follows:
+
+-   M4 Nut \* 2
+
+-   Metal Motor \*2
+
+-   Metal Holder \*2
+
+-   Copper Coupler \*2
+
+-   Blue Supportive Parts \*2
+
+-   M4\*12MM Inner Hex Screw \* 2
+
+-   M1.5 Hex Key Nickel Plated Allen Wrench \*1
+
+-   M3 Hex Key Nickel Plated Allen Wrench \*1
+
+-   M2.5 Hex Key Nickel Plated Allen Wrench \*1
+
+-   M3\*8MM Inner Hex Screw \* 4
+
+![](media/9813573b7992155d4be653f03a27c851.png)![](media/2027ea2890822d6f22db89dfa69efcc5.png)![](media/9f9048e1ad89fa5cfe85d0f62e728387.png)
+
+Step 2: Install Driver Wheel
+
+Prepare the parts as follows:
+
+-   M4\*12MM Inner Hex Screw \* 2
+
+-   M4\*50MM Inner Hex Screw \* 2
+
+-   Tank Load-bearing Wheel \* 2
+
+-   Flange Bearing \* 4
+
+-   Copper Bush \*2
+
+-   Caterpillar Band \*2
+
+-   M4 Self-locking Nut \* 2
+
+-   M3 Hex Key Nickel Plated Allen Wrench \*1
+
+![](media/d9c59c894110ce30d9d39bbadc866793.png)![](media/e73ffe5ae70d53c5a750a6948a93816d.png)![](media/65d417a5b9135fae7e3bcca041624445.png)
+
+Step 3: Install the Battery Holder
+
+Prepare the parts as follows:
+
+-   Battery Holder \*1
+
+-   M3 Nut \* 2
+
+-   Blue Metal holder \*2
+
+-   M4 Nut \*8
+
+-   M3\*10MM Flat Head Screw \* 2
+
+-   M4\*40MM Inner Hex Screw \*4
+
+-   M2.5 Hex Key Nickel Plated Allen Wrench\*1
+
+-   M3 Hex Key Nickel Plated Allen Wrench \*1
+
+-   M3\*25MM Inner Hex Screw \*4
+
+![](media/e4668f1f47bf9f514217f6ebe818d2ba.png)
+
+Move to fix the metal holder on the motor wheel with four M4\*40MM inner hex
+screws and four M4 nuts when the mounting process is completed.
+
+![](media/2584211e5037ac00559c3d3b01c5bac2.png)
+
+![](media/d763b76d99dcae8d25c0e8f7190006f5.png)![](media/b5dcec9193e5ceedbb1f038e69d9d544.png)
+
+Step 4: Mount Acrylic Board and Sensors
+
+-   Acrylic Board \* 2
+
+-   L- type Black Bracket \*1
+
+-   Photocell Sensor \*2
+
+-   IR Receiver Module \*1
+
+-   8X16 LED Panel \*1
+
+-   M2 Nut \*4
+
+-   M3 Nut \*10
+
+-   M3\*6MM Inner Hex Screw \* 8
+
+-   M2.5 Hex Key Allen Wrench \*1
+
+-   M3\*12MM Round Head Screw \*7
+
+-   M3\*10MM Hexagon Copper Bush \*8
+
+-   M2\*10MM Round Head Screw \* 4
+
+![6](media/ff92e5f5b82a79be5a2a956b621e99b3.jpeg)![1](media/16bf6867f9e91cd1381e6f90d2949bb1.jpeg)![2](media/f59d4877bc002ef3a173ef2f3e042910.jpeg)![3](media/e9f8630c8de6c1b6141a430badf865db.jpeg)
+
+Step 5: Install the Servo Platform
+
+Prepare the parts as follows:
+
+-   Servo \*1
+
+-   Black Gimbal \*1
+
+-   Cable Tie \*2
+
+-   M2x8 Round Head Cross Tapping Screw \*2
+
+-   Ultrasonic Sensor \*1
+
+-   M2\*4 Screw \*1
+
+-   M1.2\*5 Screw \*4
+
+Note: for convenient debugging, keep the ultrasonic module straight ahead and
+the angle of servo motor at 90°. Therefore, we need to set the servo to 90°
+before installing the servo platform.
+
+Code:
+
+/\*
+
+Set the 90-degree code,Copy the code and upload it to the development board. The
+steering gear connected to port D9 will rotate to 90 °
+
+\*/
+
+    \#define servoPin 9 //servo Pin
+
+    int pos; //the angle variable of servo
+
+    int pulsewidth; // pulse width variable of servo
+
+    void setup() {
+
+    pinMode(servoPin, OUTPUT); //set servo pin to OUTPUT
+
+    procedure(0); //set the angle of servo to 0°
+
+    }
+
+    void loop() {
+
+    procedure(90); // tell servo to go to position in variable 90°
+
+    }
+
+    // function to control servo
+
+    void procedure(int myangle) {
+
+    pulsewidth = myangle \* 11 + 500; //calculate the value of pulse width
+
+    digitalWrite(servoPin,HIGH);
+
+    delayMicroseconds(pulsewidth); //The duration of high level is pulse width
+
+    digitalWrite(servoPin,LOW);
+
+    delay((20 - pulsewidth / 1000)); // the cycle is 20ms, the low level last for
+    the rest of time
+
+    }
+
+![超声波](media/9d29c7f9af30af65704c08d71eda3072.png)
+
+![IMG_256](media/2a699a839b28414fc3f4c2e290f90384.png)
+
+Note:You can find M1.2\*5 Screws inside the bag of Plastic Platform
+
+![%}_ZCT\~2%4IIRCYCLSCJQ%C](media/67bf78a0c063743de833674c9ca9b25d.png)
+
+Step 6: Install Sensors and Boards
+
+Prepare the parts as follows:
+
+-   M3\*6MM Round Head Screw \*12
+
+-   L298P Shield \*1
+
+-   V4.0 Board \*1
+
+-   V5 Sensor Shield \*1
+
+-   Screwdriver \*1
+
+-   Bluetooth Module \*1
+
+![4](media/1beac6059f40b6eca748fc6dca13efaf.jpeg)![7](media/9a5d6f464a4c682caa0edd65b5b573ae.jpeg)![8](media/51b702d905ef099b80984b7a36e5486f.jpeg)![9](media/298d2464b13d685888746d8bc68c3a99.jpeg)![10](media/2573f2ee9a26a451278c31f4bb6e3524.jpeg)
+
+Step 7: Hook-up Guide
+
+![C:\\Users\\Admin\\Desktop\\KS0428接线\\ks0428 电机接线.jpgks0428
+电机接线](media/d35ffe6c0c275548f40bcafb42a93da1.jpeg)
+
+![C:\\Users\\Admin\\Desktop\\KS0428接线\\左电机-2.jpg左电机-2](media/9e02d1246e5ee76f004bba18685069fe.jpeg)
+
+![C:\\Users\\Admin\\Desktop\\KS0428接线\\右电机.jpg右电机](media/dda62c2ba6d1e994f8029339c249e12e.jpeg)
+
+![C:\\Users\\Admin\\Desktop\\KS0428接线\\电池盒-2.jpg电池盒-2](media/efa2b5b60a43cbdb7b06abeb543e35e5.jpeg)
+
+![C:\\Users\\Admin\\Desktop\\KS0428接线\\屏幕截图 2021-03-29 142503.jpg屏幕截图
+2021-03-29 142503](media/2581b78ddf53a9d94655bf09a503aaaf.jpeg)
+
+Step 8: Wire Up LED Panel
+
+![C:\\Users\\Admin\\Desktop\\KS0428接线\\矩阵LED-1.jpg矩阵LED-1](media/979e42393d123e86427aba670300740e.jpeg)![C:\\Users\\Admin\\Desktop\\KS0428接线\\矩阵LED.jpg矩阵LED](media/2394590b9f127167cdbce26c939afd91.jpeg)![C:\\Users\\Admin\\Desktop\\KS0428接线\\矩阵LED-2.jpg矩阵LED-2](media/87f1ff9241f145316d04a4072ba45df0.jpeg)
+
+| LED Panel                                                                                                     | V5 Sensor Shield                                                                                                  |
+|---------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
+| GND                                                                                                           | -(GND)                                                                                                            |
+| VCC                                                                                                           | +(VCC)                                                                                                            |
+| SDA                                                                                                           | SDA                                                                                                               |
+| SCL                                                                                                           | SCL                                                                                                               |
+| ![C:\\Users\\Admin\\Desktop\\KS0428接线\\矩阵LED-1.jpg矩阵LED-1](media/979e42393d123e86427aba670300740e.jpeg) | ![C:\\Users\\Admin\\Desktop\\KS0428接线\\矩阵LED接线.jpg矩阵LED接线](media/a17825552bd0275e895c66be0b2a3efe.jpeg) |
+
+Step 9: Install all parts of Acrylic plate
+
+![30](media/5bf9cf95040ef56217c2a5a77f059eed.png)
+
+![C:\\Users\\Admin\\Desktop\\KS0428接线\\红外接收.jpg红外接收](media/fc4ff9fa6898d37c816a0c23dbd7efed.jpeg)
+
+![](media/fa285243c644ca7481c947e94ddb8bd8.png)
+
+![31](media/30d77c9f512c64d65352e049b134f7c0.png)
+
+![C:\\Users\\Admin\\Desktop\\KS0428接线\\左光敏.jpg左光敏](media/17a7c2181ccedd6fc6995f1b09276a9b.jpeg)
+
+![C:\\Users\\Admin\\Desktop\\KS0428接线\\右光敏.jpg右光敏](media/e791938575d9f5ce64437a91b5b62ed9.jpeg)
+
+![](media/359345b00db31ba06827e98c1087ad42.png)
+
+![32](media/6385938690deb8eb33763951019169c5.png)
+
+![WKMC[Q\~PENE12H_OT8YNLMG](media/ac0f66f45148fc48d5bca4a208b2b384.png)
+
+![RWRX_I3@Y50R_\`HDQKVLC@6](media/316ab1f1dc16a1178b78fa6c01508357.png)
+
+![C:\\Users\\Admin\\Desktop\\KS0428接线\\屏幕截图 2021-03-26 085002.jpg屏幕截图
+2021-03-26 085002](media/466f5502689d16c6e59963a542d2a59e.jpeg)
+
+![33](media/78a6fe318789e9b9bf7f1af349c1bb70.jpeg)
+
+![](media/78dd3d5dfe9902fc82acb8dc83d63dee.png)
+
+Step 10: Tank Robot
+
+Note: Remove the Bluetooth module before uploading test code. Otherwise, you
+will fail to upload test code.
+
+![KS0428](media/f89eeea3bebb72d7a0829faed1774e22.png)
+
+### Multi-purpose Robot Car
 
  ![](media/33587ca7fd70c974ea145c25349fd98d.png)
 
-1.  **Description**
+  **Description**
 
 In the previous projects, the tank car only performs a single function. However,
 in this lesson, we integrate all of its functions to control smart car via
@@ -4950,7 +4954,7 @@ Bluetooth control.
 Here is a simple flow chart of multi-purpose robot car for your
 reference.![](media/3f050566dd9628e61d1b948fe3010db7.png)
 
-1.  **Connection Diagram**
+  **Connection Diagram**
 
 ![C:\\Users\\Admin\\Desktop\\KS0428接线\\全.jpg全](media/5740239ab7c8146def446e410d24de58.jpeg)
 
@@ -5020,7 +5024,7 @@ Wire-up Guide:
 ![](media/d96d3af2404efd9c330e9b6b99ecdc96.png)
 ![](media/76aeed2f0975903e858486d7d20b58ea.png)
 
-1.  **Test Code**
+  **Test Code**
 
         /\*
 
@@ -5736,7 +5740,7 @@ Wire-up Guide:
 
         }
 
-1.  **Test Result**
+  **Test Result**
 
 Note:Remove the Bluetooth module before uploading test code. Otherwise, you will
 fail to upload test code. Reconnect Bluetooth module after uploading test code
