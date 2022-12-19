@@ -404,55 +404,43 @@ will fail to upload test code.
 
 ![KS0428](media/f89eeea3bebb72d7a0829faed1774e22.png)
 
-## 6.Install Arduino IDE and Driver
+## **5. Install Arduino IDE and Driver**
 
-1.  **Installing Arduino IDE**
+### **Installing Arduino IDE**
 
 When you get control board, you need to download Arduino IDE and driver firstly.
 
 You could download Arduino IDE from the official website:
 
-<https://www.arduino.cc/>, click the **SOFTWARE** on the browse bar,
-click“DOWNLOADS” to enter download page, as shown below:
+<https://www.arduino.cc/>, click the **SOFTWARE** on the browse bar to enter download page, as shown below:
 
-![](media/4636aac9aca9b3aa9d86580caac51b81.png)
+![](media/83a843a56d49e93ec9f99bfb33fee269.png)
 
-There are various versions of IDE for Arduino. Just download a version
-compatible with your system. Here we will show you how to download and install
-the windows version of Arduino IDE.
+There are various versions of IDE for Arduino. Just download a version compatible with your system. Here we will show you how to download and install the windows version of Arduino IDE.
 
-![](media/3d3e36e47f8c7009155f0e8cc256ead1.png)
+![](media/fac59eb6f401fa9e6ce711bb5f3f62f2.png)
 
-There are two versions of IDE for WINDOWS system. You can choose between the
-installer (.exe) and the Zip file. For installer, it can be directly downloaded,
-without the need of installing it manually while for Zip package, you will need
-to install the driver manually.
+You can choose between the Installer (.exe) and the Zip packages. We suggest you use the first one that installs directly everything you need to use the Arduino Software (IDE), including the drivers. With the Zip package you need to install the drivers manually. The Zip file is also useful if you want to create a portable installation.
 
-![](media/745910f7138b08d5cbcb557f194b0679.png)
+![](media/0ab58d5303a100e9638be44131a34b51.png)
 
 You just need to click JUST DOWNLOAD.
 
-1.  **Keyestudio V4.0 Development Board**
+###  **Keyestudio V4.0 Development Board**
 
-You need to know that keyestudio V4.0 development board is the core of this
-smart car.
+You need to know that keyestudio V4.0 development board is the core of this smart car.
 
 ![UNO](media/d48e310dbb7f60760a02fbd88c17d97a.png)
 
-keyestudio V4.0 development board is an Arduino uno-compatible board, which is
-based on ATmega328P MCU, and with a cp2102 Chip as a UART-to-USB converter.
+keyestudio V4.0 development board is an Arduino uno-compatible board, which is based on ATmega328P MCU, and with a cp2102 Chip as a UART-to-USB converter.
 
 ![KS0497 新主板_画板 1](media/d1d8b8703109cc5f953ec723ac57804d.jpeg)
 
-It has 14 digital input/output pins (of which 6 can be used as PWM outputs), 6
-analog inputs, a 16 MHz quartz crystal, a USB connection, a power jack, 2 ICSP
-headers and a reset button.
+It has 14 digital input/output pins (of which 6 can be used as PWM outputs), 6 analog inputs, a 16 MHz quartz crystal, a USB connection, a power jack, 2 ICSP headers and a reset button.
 
 ![3](media/bc609cfdb8f102e95dd298121e8eae01.jpeg)
 
-It contains everything needed to support the microcontroller. Simply connect it
-to a computer with a USB cable or power it via an external DC power jack (DC
-7-12V) or via female headers Vin/ GND(DC 7-12V) to get started.
+It contains everything needed to support the microcontroller. Simply connect it to a computer with a USB cable or power it via an external DC power jack (DC 7-12V) or via female headers Vin/ GND(DC 7-12V) to get started.
 
 | Microcontroller             | ATmega328P-PU                                            |
 |-----------------------------|----------------------------------------------------------|
@@ -469,181 +457,182 @@ to a computer with a USB cable or power it via an external DC power jack (DC
 | Clock Speed                 | 16 MHz                                                   |
 | LED_BUILTIN                 | D13                                                      |
 
-1.  **Installing V4.0 board Driver**
+###  **Installing the driver for Windows system**
 
-Let’s install the driver of keyestudio V4.0 board. The USB-TTL chip on V4.0
-board adopts CP2102 serial chip. The driver program of this chip is included in
-Arduino 1.8 version and above, which is convenient. Plug on USB port of board,
-the computer can recognize the hardware and automatically install the driver of
-CP2102.
+Let’s install the driver of keyestudio V4.0 board. The USB-TTL chip on V4.0 board adopts CP2102 serial chip.
 
-If you install it unsuccessfully, or intend to install it manually, open the
-device manager of computer. Right click Computer----- Properties----- Device
-Manager
+Windows system
 
-![捕获](media/afa5b0dde9342bd7ad9f385333cb6f55.png)
+![](media/b5cebd0e0a088eddf38f52c83bff3150.png)
 
-The yellow exclamation mark on the page implies an unsuccessful installation and
-you should double click the hardware and update the driver.
+You can download the driver of the CP2101 in the following link.
 
-![捕获1](media/c26ca0ef1bf1506c815b6e3e239cf525.png)
+<https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads>
 
-Click“OK”to enter the following page, click“browse my computer for updated
-driver software”, find the installed or downloaded ARDUINO software. As shown
-below:
+For Windows system, you can select the first driver to download and upzip it.
 
-![捕获7](media/4ec7a5ea3c8a1fd9663eef4768b687c5.png)
+![](media/4df300d69be9b7dd8f60e4bc1142e3b8.png)
 
-There is a DRIVERS folder in Arduino software installed
-package（![](media/f50a31a59716594afbd7c2254cfd521e.png)）, open driver folder
-and you can see the driver of CP210X series chips.
+![](media/eb9a5fa40edeab575e7b4d8a26d710f6.png)
 
-Click“Browse”, then find the driver folder, or you could enter “driver” to
-search in rectangular box, then click“next”, the driver will be installed
-successfully. (I place Arduino software folder on the desktop, you could follow
-my suit.)
+Then open the device manager of computer. Right click Computer----- Properties----- Device Manager
 
-![QQ图片20200527114448](media/417de936fa9720c7a7427c4d07718292.png)
+![](media/5d3921d98a5be791b0b5166164b389e7.png)
 
-Open device manager, you will find the yellow exclamation mark disappear. The
-driver of CP2102 is installed successfully.
+The yellow exclamation mark on the page implies that the driver of CP2101 isn’t installed. Next, you should double-click the hardware to update the driver.
 
-![图2(1)](media/efce0ba96c48d853f302730b4d481ee9.jpeg)
+![](media/0946d3e3d322e66303a5e3fec0bb53c0.png)
 
-![图1(2)](media/2f751d5f4e4c0c18fa862c589eaaf0da.jpeg)
+Click“OK”to enter the following page, click“browse my computer for updated driver software”. As shown below:
 
-1.  **Install other visions of driver**
+![](media/abff63e491413339a985a0a03df21106.png)
 
-If your development board is Arduino UNO board, install the driver as follows:
+Navigate to the CP210x_Universal_Windows_Driver unzip folder that you have downloaded and click Next.
 
-Step 1: Plug in the development board, click Computer----- Properties-----
-Device Manager, you could see the unknown device is shown.
+![未标题-1](media/270dc5d39d10f389d1cf212f0e5e7b40.jpeg)
 
-![](media/e492989170473f2e77a97902f996d1ba.png)
+![](media/1e888fdeb85783a123b6948dffa44a97.png)
 
-Step 2: Update the driver
+Open device manager, you will find the yellow exclamation mark disappear. The driver of CP2102 is installed successfully.
 
-![](media/d7f62064e3eef1a4926cbc609253af5c.png)
+![123](media/9b8ddc1c8af12e5f363817d49cea8571.png)
 
-Step 3: click“browse my computer for updated driver software”
+###  **Installing the driver for MAC system**
 
-![](media/9fd75e90e09605342e00b47bdd416654.png)
+**MAC system**
 
-Step 4: find out the folder where the ARDUINO software is installed, click
-**drivers** folder and tap“Next”
+![](media/aee40e1614afae9be6b0ffa78bcb833c.png)
 
-![](media/9e9be87771ff1b78050d7f05f48063df.png)
+You can download the driver of the CP2101 in the following link.
 
-Step 5: the driver is installed successfully.
+<https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads>
 
-![](media/56f5dff1b1242a47b9244357f5519ede.png)
+For MacOS system, you can select the this driver to download and upzip it.
 
-The device manager shows the serial port of Arduino.
+![](media/28a72783e9df9fb397a9ac2ba435e716.png)
 
-![](media/09e91fee277b7a69b8ad57ffa3294d48.png)
+Open the driver folder and double-click SiLabsUSBDriverDisk.dmg file.
 
-1.  **Arduino IDE Setting**
+![{B226126D-C3F1-8402-1361-7E6AB44E7078}](media/59c91402aeb0941e301acb8c8aa36141.jpeg)
 
-Click![](media/675ae7298ce0973df720b2fbbb514caa.png)icon，open Arduino IDE.
+4.You will view following files as follows:
 
-![](media/e9a2d59afcff8121d18d8767326baa42.png)
+![{5C3FCA68-7405-460C-91BE-E0775E4B2429}](media/cf395759ef97b05784c65b2514f728fc.jpeg)
 
-To avoid the errors when uploading the program to the board, you need to select
-the correct Arduino board that matches the board connected to your computer.
+5\. Double-click Install CP210x VCP Driver, tick Don’t warn me and click Open
 
-Then come back to the Arduino software, you should click Tools→Board, select the
-board. (as shown below)
+![{59DB6F00-1A8B-3450-CDAA-ED2D7CAA65D6}](media/56ad0368ee8f50fef217428c1e7c00c5.jpeg)
 
-![](media/84317a7babddff172520b99756dc1f85.png)
+Click Continue
 
-Then select the correct COM port (you can see the corresponding COM port after
-the driver is successfully installed)
+![{E3881FC6-7F40-B173-AA22-2A2A8A36ECAB}](media/88a3949d8e7d10d631a8fffa2b9df108.jpeg)
 
-![](media/bcd36a3d3e1209c16866e554089832d5.png)
+Click Continue and Agree
 
-Before uploading the program to the board, let’s demonstrate the function of
-each symbol in the Arduino IDE toolbar.
+![{5D5929F6-B53A-0C03-7919-49AA20E7738D}](media/28e8013fdde7914820515697181f1ec7.jpeg)
 
-![](media/2598b31529ac4bff88630522b97b6c41.png)
+Click Continue and enter your user password.
 
-A- Used to verify whether there is any compiling mistakes or not.
+![{15F1B01F-B066-9615-0B44-D5039DF02484}](media/d610b36b30a7847d9562143531ff1bde.jpeg)
 
-B- Used to upload the sketch to your Arduino board.
+![{B4E122B5-21D3-E930-1D2B-70E00ED504BE}](media/b4e122b521d3e9301d2b70e00ed504be.jpeg)
 
-C- Used to create shortcut window of a new sketch.
+9.Select Open Security Preferences
 
-D- Used to directly open an example sketch.
+![](media/f97f0c1a960ddda5c2a98f52386f0462.png)
 
-E- Used to save the sketch.
+Click the lock then enter your user’s password to authorize.
 
-F- Used to send the serial data received from board to the serial monitor.
+![{7B313247-7D6D-C1AD-1403-5E14567A2208}](media/41ae5006b276caa2a752f49858e01bf6.jpeg)
 
-1.  **Start First Program**
+![{E8F637A3-A951-0AA8-F90C-65820D4D1CD8}](media/e8f637a3a9510aa8f90c65820d4d1cd8.jpeg)
+
+Then click Allow
+
+![{2A6CFC15-8C4A-2409-CA08-34BF16BD4C9A}](media/8d87ad5fd228acf0a28dc22b9d91194b.jpeg)
+
+12.Back to installation page, and wait to install.
+
+![{47734125-C9FF-7E42-674B-4FD59872EB1C}](media/952736d011b3ac0a628df0a5473af00f.jpeg)
+
+Successfully installed ![{46A164EF-E3D2-CBE2-8CAC-B67C253E68AB}](media/7c26ef0b6e1d36b49c1d80dc4f153707.jpeg)
+
+###  **Arduino IDE Setting**
+
+Click![](media/9035a01879f001b75827e908d7dceb2d.png)icon，open Arduino IDE.
+
+![](media/843b5bb2d4c1d33c215e8d0c76c07abf.png)
+
+To avoid the errors when uploading the program to the board, you need to select the correct Arduino board that matches the board connected to your computer.
+
+Then come back to the Arduino software, you should click Tools→Board, select the board. (as shown below)
+
+![](media/01f0cdcc5418a5676cd69a34abf2ff9c.png)
+
+Then select the correct COM port (you can see the corresponding COM port after the driver is successfully installed)
+
+![](media/9fd19e4ad9b31ad017e31c7c2c1d0018.png)
+
+Before uploading the program to the board, let’s demonstrate the function of each symbol in the Arduino IDE toolbar.
+
+![](media/9035c37073325fa802cbcc7476d08ef6.png)
+
+1- Used to verify whether there is any compiling mistakes or not.
+
+2- Used to upload the sketch to your Arduino board.
+
+3- Used to send the serial data received from board to the serial plottle.
+
+4- Used to send the serial data received from board to the serial monitor.
+
+###  **Start First Program**
 
 Open the file to select Example, choose BLINK from BASIC, as shown below:
 
-![](media/2a6a0b8b8e2585776e01873caf10a1b0.png)
+![](media/faa29181fe4a6619dd549ae84e05e247.png) ![](media/798b6b704d8c3d405bfa7b12fb9739f5.png)
 
-![](media/6030cde1341c3432f0f4b1fb6c92e49e.png)
+Set board and COM port, the corresponding board and COM port are shown on the lower right of IDE.
 
-Set board and COM port, the corresponding board and COM port are shown on the
-lower right of IDE.
+![](media/fd3a4ab756755975944bfe310fdb4f46.png)
 
-![](media/5c4521f3fa5c4f4c0a5c9d1581ab1580.png)
+Click![](media/ddd21c81338ae1f6b7f84de2a3caecf0.png)to start compiling the program, check errors.
 
-Click![](media/ddd21c81338ae1f6b7f84de2a3caecf0.png)to start compiling the
-program, check errors.
+![](media/41214d64128dbd9374a07460d64b3616.png)
 
-![](media/9948cd36a3b39cb57fd2bea79540c4b7.png)
+Click![](media/9c9158a5d49baa740ea2f0048f655017.png)to upload the program, upload successfully.
 
-Click![](media/9c9158a5d49baa740ea2f0048f655017.png)to upload the program,
-upload successfully.
+![](media/ee1957edf30584f010dd748405f14095.png)
 
-![](media/60e002aacf662c1ecf88ad3ecd85e6ca.png)
+Upload the program successfully, the onboard LED lights on for 1s, lights off for 1s. Congratulation, you have finished the first program.
 
-Upload the program successfully, the onboard LED lights on for 1s, lights off
-for 1s. Congratulation, you have finished the first program.
+## **6. How to Add Libraries?**
 
-## 7. How to Add Libraries?
+**What are Libraries ?**
 
-What are Libraries ?
+[Libraries](https://www.arduino.cc/en/Reference/Libraries) are a collection of code that makes it easy for you to drive a sensor,display, module, etc.
 
-[Libraries](https://www.arduino.cc/en/Reference/Libraries) are a collection of
-code that makes it easy for you to drive a sensor,display, module, etc.
+For example, the built-in LiquidCrystal library helps talk to LCD displays. There are hundreds of additional libraries available on the Internet for download.
 
-For example, the built-in LiquidCrystal library helps talk to LCD displays.
-There are hundreds of additional libraries available on the Internet for
-download.
+The built-in libraries and some of these additional libraries are listed in the reference.
 
-The built-in libraries and some of these additional libraries are listed in the
-reference.
+<https://www.arduino.cc/en/Reference/Libraries>
 
-Here we will introduce the most simple way for you to add libraries .
+**Add ZIP Libraries**
 
-Step 1：After downloading well the Arduino IDE, you can right-click the icon of
-Arduino IDE.
+When you want to add a zip library, you need to download it as a ZIP file, put in the proper directory. The Libraries needed to run the mini tank can be found on：<https://fs.keyestudio.com/KS0428>
 
-Find the option "Open file location" shown as below:
+![](media/0a9ec2ea3098839ff7b07a9cbd8e64d4.png)
 
-![IMG_256](media/f1d5fd3883e0997ca46dcf8513733c46.png)
+Click Sketch----\>Include Library—\>Add.ZIP Library，then Then navigate to the library file you downloaded and click "open."
 
-Step 2: Enter it to find libraries folder which is the library file of Arduino.
+![](media/62cdfbd17c41cbbab8daf726b57af370.png)
 
-![](media/a67a5b5921be4dbc1b0ce92627111d15.png)
+![](media/032a8a41b35e6cf460e4c3f09c990dc4.jpeg)
 
-Step 3：Next to find the“libraries”of tank robot(seen in the link:
-https://fs.keyestudio.com/KS0428), you just need to replicate and paste into the
-libraries folder of Arduino IDE.
+Import the library. You can find it in the include library list.
 
-![](media/15036523a066322ee54ba75a2b38b99b.png)
+![](media/4faebb825ec060ec609b773f551b686a.png)
 
-![](media/c9ea54bd692ee7c119347adc77372422.png)
-
-Download them from the link and unzip them.
-
-Then add them into libraries of Arduino 1.8.13, as shown below:
-
-![图片1(2)](media/27338f35c21a51aff1138fc9305a1f9d.jpeg)
 
 Now, you import libraries successfully.
 
