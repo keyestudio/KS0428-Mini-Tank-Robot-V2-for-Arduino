@@ -660,7 +660,7 @@ Note: (G), marked on each sensor and module, is negative pole and connected to
 “G”, ”-”or “GND”on the sensor shield and control board ; (V) is positive pole
 and linked with V , VCC, + or 5V on the sensor shield or control board.
 
-**Project 1: LED Blink**
+### Project 1: LED Blink
 
 ![图片1](media/4c5aa10c3eda7ed4c970b514f5d08da4.png)
 
@@ -810,7 +810,7 @@ We’ve altered pins and connected LED to D10.
 The test result shows that the LED flashes faster. Therefore, we can draw a
 conclusion that pins and time delaying affect flash frequency.
 
-**Project 2: Adjust LED Brightness**
+### Project 2: Adjust LED Brightness
 
 1.  **Description**
 
@@ -1207,7 +1207,7 @@ PWM restrains the brightness, so LED is linked with PWM pins. Connect LED to pin
 
 Upload code, press it by hand to observe the LED brightness.
 
-**Project 4: Servo Control**
+### Project 4: Servo Control
 
 ![IMG_256](media/ae51208a3f560ad6edefe370eb588c13.png)
 
@@ -1722,7 +1722,7 @@ to the D10 pin.
 Upload test code to development board and block ultrasonic sensor by hand, then
 check if LED is on
 
-**Project 6: IR Reception**
+### Project 6: IR Reception
 
 1.  **Description**
 
@@ -1945,7 +1945,7 @@ then press the keys of remote control to make LED light on and off.
 Upload code to development board, press“OK”key on remote control to make LED on
 and off.
 
-**Project 7: Bluetooth Remote Control**
+### Project 7: Bluetooth Remote Control
 
 1.  **Description**
 
@@ -2196,7 +2196,7 @@ Click“Write”on APP, when you enter 1, LED will be on; when you input 0, LED 
 be off. (Remember to remove the Bluetooth module after finishing experiment,
 otherwise, code-burning will be affected)
 
-**Project 8: Motor Driving and Speed Control**
+### Project 8: Motor Driving and Speed Control
 
 **(1) Description**
 
@@ -3243,7 +3243,7 @@ port 4.
 Upload code on keyestudio V4.0 development board, DIP switch is dialed to right
 end and power on, the smart robot follows light to move.
 
-**Project 11: Ultrasonic Avoiding Tank**
+### Project 11: Ultrasonic Avoiding Tank
 
 ![](media/a25b9ad6fd5992837a9a716fdb96de9f.png)
 
@@ -4003,7 +4003,7 @@ Upload code successfully, DIP switch is dialed to the right end, the servo
 rotates to 90°, “V” is shown on 8X16 LED panel and smart car moves as the
 obstacle moves.
 
-**Project 13: IR Remote Robot Tank**
+### Project 13: IR Remote Robot Tank
 
 ![](media/1ed859f1647835ca2e2464375faac00e.png)
 
