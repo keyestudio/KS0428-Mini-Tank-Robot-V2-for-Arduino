@@ -384,7 +384,7 @@ and linked with V , VCC, + or 5V on the sensor shield or control board.
 
 ![图片1](media/4c5aa10c3eda7ed4c970b514f5d08da4.png)
 
-1.  **Description**
+  **Description**
 
 For starters and enthusiasts, LED Blink is a fundamental program. LED, the
 abbreviation of light emitting diodes, consists of Ga, As, P, N chemical
@@ -392,7 +392,7 @@ compounds and so on. The LED can flash in diverse color by altering the delay
 time in the test code. When in control, power on GND and VCC, the LED will be on
 if S end is in high level; nevertheless, it will go off.
 
-1.  **Specification**
+ **Specification**
 
 ![图片2](media/16fbd30bf613a97959a7082a684d675d.png)
 
@@ -406,7 +406,7 @@ LED display color: red
 
 **Components**![](media/de84625c18a4baffe3df7d08ae531229.png)
 
-**(4) V5 Sensor Shield**
+**V5 Sensor Shield**
 
 It will be troublesome when we combine Arduino development boards with numerous
 sensors. However, the V5 sensor shield, compatible with Arduino development
@@ -425,7 +425,7 @@ communication pins, like serial, IIC, and SPI communication as well.
 
 Seen from the above diagram, LED is linked with D2
 
-**(5) Test Code**
+**Test Code**
 
     /\*
 
@@ -463,7 +463,7 @@ Seen from the above diagram, LED is linked with D2
 
 
 
-**(6) Test Result**
+**Test Result**
 
 (There will be contradiction about serial communication between code and
 Bluetooth when uploading code. Therefore, don’t link with Bluetooth module
@@ -473,7 +473,7 @@ Upload the program on the development board, LED flickers at the interval of 1s.
 
 ![](media/b42492b0ebdd2cc355d6082c6d3484c9.png)
 
-1.  **Code Explanation**
+**Code Explanation**
 
 **pinMode(2，OUTPUT) -** Set pin2 to OUTPUT
 
@@ -530,7 +530,7 @@ We’ve altered pins and connected LED to D10.
 The test result shows that the LED flashes faster. Therefore, we can draw a
 conclusion that pins and time delaying affect flash frequency.
 
-### **Project 2: Adjust LED Brightness**
+### Project 2: Adjust LED Brightness
 
 1.  **Description**
 
@@ -927,7 +927,7 @@ PWM restrains the brightness, so LED is linked with PWM pins. Connect LED to pin
 
 Upload code, press it by hand to observe the LED brightness.
 
-### **Project 4: Servo Control**
+### Project 4: Servo Control
 
 ![IMG_256](media/ae51208a3f560ad6edefe370eb588c13.png)
 
@@ -1442,7 +1442,7 @@ to the D10 pin.
 Upload test code to development board and block ultrasonic sensor by hand, then
 check if LED is on
 
-### **Project 6: IR Reception**
+### Project 6: IR Reception
 
 1.  **Description**
 
@@ -1665,7 +1665,7 @@ then press the keys of remote control to make LED light on and off.
 Upload code to development board, press“OK”key on remote control to make LED on
 and off.
 
-### **Project 7: Bluetooth Remote Control**
+### Project 7: Bluetooth Remote Control
 
 1.  **Description**
 
@@ -2750,7 +2750,7 @@ stop patterns, alternately.
 
 ![](media/829f30a3305322b15372ca0df6213ebb.png)
 
-1.  **Description**
+ **Description**
 
 We’ve introduce how to use various sensors, modules.
 
@@ -2963,11 +2963,11 @@ port 4.
 Upload code on keyestudio V4.0 development board, DIP switch is dialed to right
 end and power on, the smart robot follows light to move.
 
-### **Project 11: Ultrasonic Avoiding Tank**
+### Project 11: Ultrasonic Avoiding Tank
 
 ![](media/a25b9ad6fd5992837a9a716fdb96de9f.png)
 
-1.  **Description**
+ **Description**
 
 In this program, the ultrasonic sensor detects the distance of obstacle to send
 signals that control the robot car. Next, let’s show you how to make an obstacle
@@ -2993,7 +2993,7 @@ avoidance car.
 | Condition 2  | State                                                                                                                     |                   |                                                                                             |
 | a≥20         | go front（PWM set to 200）                                                                                                |                   |                                                                                             |
 
-### Flow chart
+ Flow chart
 
 ![](media/7fec0691e9a512458f0354cceca7f8ef.png)
 
@@ -3310,7 +3310,7 @@ tank robot goes forward and automatically avoids the obstacle.
 
 ![](media/44c5d070ee7284b973c4d8805295b049.png)
 
-1.  **Description**
+  **Description**
 
 In project 11, we made an obstacle avoidance car. In fact, we only need to alter
 a test code to transform an obstacle avoidance car into a following car. In this
@@ -3723,7 +3723,7 @@ Upload code successfully, DIP switch is dialed to the right end, the servo
 rotates to 90°, “V” is shown on 8X16 LED panel and smart car moves as the
 obstacle moves.
 
-**Project 13: IR Remote Robot Tank**
+### Project 13: IR Remote Robot Tank
 
 ![](media/1ed859f1647835ca2e2464375faac00e.png)
 
