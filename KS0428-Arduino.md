@@ -127,9 +127,9 @@ components.
 | **Tools**            |                                                 |      |                                                                                      |
 | 1                    | 2.0\*40MM Blue and Black Slotted Screwdriver    | 1    | ![](media/2f8ee1756b6ef39b73bda1f0a8f40aa5.png)                                      |
 | 2                    | 2.0\*40MM Purple and Black Phillips Screwdriver | 1    | ![](media/b7f6b3de37285ff7ce74e3cbcf5be54f.png)                                      |
-| 3                    | M1.5 Hex Key Nickel Plated Allen Wrench         | 1    | ![图层 6 拷贝 2](media/4b6e105ae5ec1b441e2e9ec2abcfec2e.png)                         |
-| 4                    | M2.5 Hex Key Nickel Plated Allen Wrench         | 1    | ![图层 6 拷贝](media/8116960b9bf94054f3436b90c2186a95.png)                           |
-| 5                    | M3 Hex Key Nickel Plated Allen Wrench           | 1    | ![图层 6](media/b7e8196abfab10cfe864b060148fa621.png)                                |
+| 3                    | M1.5 Hex Key Nickel Plated Allen Wrench         | 1    | ![](media/4b6e105ae5ec1b441e2e9ec2abcfec2e.png)                         |
+| 4                    | M2.5 Hex Key Nickel Plated Allen Wrench         | 1    | ![](media/8116960b9bf94054f3436b90c2186a95.png)                           |
+| 5                    | M3 Hex Key Nickel Plated Allen Wrench           | 1    | ![图层 ](media/b7e8196abfab10cfe864b060148fa621.png)                                |
 | 6                    | Nylon Cable Ties                                | 6    | ![](media/e911e9a65a619626b653f0a7cc939c3f.png)                                      |
 | 7                    | 8MM Winding Pipe                                | 12CM | ![](media/aa11fd369435227b9125d88f22ea4028.png)                                      |
 | 8                    | Decorative Cardboard                            | 1    | ![](media/d719fafc448a840b97d566a72a128c4a.png)                                      |
@@ -372,7 +372,7 @@ Now, you import libraries successfully.
 
 The whole project begins with basic programs. Starting from simple to complex,
 the lessons will guide you to assemble the robot car and absorb the knowledge of
-electronic and machinery step by step. **If you want to start directly by installing the robot, you can skip to our [last project](https://ks0428-mini-tank-robot-v2-for-arduino.readthedocs.io/en/latest/KS0428_arduino.html#the-final-fully-functional-project).**
+electronic and machinery step by step. **If you want to start directly by installing the robot, you can skip to our [assembly-guide](https://ks0428-mini-tank-robot-v2-for-arduino.readthedocs.io/en/latest/KS0428-Arduino.html#assembly-guide).**
 
 ![IMG_256](media/b136b7a4b51302f3c58574b17370eae7.jpeg)
 
