@@ -1284,54 +1284,31 @@ can be regarded as digital ports. A0 equals to D14, A1 is equivalent to digital
 Firstly import library file of IR receiver module(refer to how to import Arduino
 library file) before designing code.
 
-        /\*
+    /*
+    keyestudio Mini Tank Robot V2
+    lesson 6
+    IRremote
+    http://www.keyestudio.com
+    */ 
+    #include <IRremoteTank.h>     // IRremote library statement
+    int RECV_PIN = A0;        //define the pins of IR receiver as A0
+    IRrecv irrecv(RECV_PIN);   
+    decode_results results;   // decode results exist in the“result”of “decode results”
+    void setup()  
+      {
+          Serial.begin(9600);  
+          irrecv.enableIRIn(); //Enable receiver
+      }  
+     void loop() {  
+        if (irrecv.decode(&results))//decode successfully, receive a set of infrared signals
+        {  
+          Serial.println(results.value, HEX);//Wrap word in 16 HEX to output and receive code 
+          irrecv.resume(); // Receive the next value
+        }  
+        delay(100);  
+      }
+    //*******************************************************
 
-        keyestudio Mini Tank Robot V2
-
-        lesson 6
-
-        IRremote
-
-        http://www.keyestudio.com
-
-        \*/
-
-        \#include \<RremoteTank.h\> // IRremote library statement
-
-        int RECV_PIN = A0; //define the pins of IR receiver as A0
-
-        IRrecv irrecv(RECV_PIN);
-
-        decode_results results; // decode results exist in the“result”of “decode
-        results”
-
-        void setup()
-
-        {
-
-        Serial.begin(9600);
-
-        irrecv.enableIRIn(); //Enable receiver
-
-        }
-
-        void loop() {
-
-        if (irrecv.decode(&results))//decode successfully and receive a set of infrared
-        signals
-
-        {
-
-        Serial.println(results.value, HEX);//Wrap word in 16 HEX to output and receive
-        code
-
-        irrecv.resume(); // Receive the next value
-
-        }
-
-        delay(100);
-
-        }
 
 
 
@@ -1365,70 +1342,41 @@ then press the keys of remote control to make LED light on and off.
 
 ![](media/386be04822468a3048c6af493a11c707.png)
 
-    /\* keyestudio Mini Tank Robot V2
+	/* keyestudio Mini Tank Robot V2
+	lesson 6.2
+	IRremote
+	http://www.keyestudio.com
+	*/ 
+	#include <IRremoteTank.h>
+	int RECV_PIN = A0;//define the pin of IR receiver as A0
+	int LED_PIN=10;//define the pin of LED
+	int a=0;
+	IRrecv irrecv(RECV_PIN);
+	decode_results results;
+	void setup()
+	{
+	  Serial.begin(9600);
+	  irrecv.enableIRIn(); // Initialize the IR receiver 
+	  pinMode(LED_PIN,OUTPUT);//set the pin of LED to 4
+	}
+	void loop() {
+	  if (irrecv.decode(&results)) {
+		Serial.println(results.value, HEX);//Wrap word in 16 HEX to output and receive code
+		if(results.value==0xFF02FD &a==0) // according to the above key value, press “OK” on remote control , LED will be controlled
+		{
+			digitalWrite(LED_PIN,HIGH);//LED will be on
+		a=1;
+		}
+		else if(results.value==0xFF02FD &a==1) //press again
+		{
+		digitalWrite(LED_PIN,LOW);//LED will go off
+		a=0;
+		}
+		irrecv.resume(); //receive the next value
+	  }
+	}
+	//*******************************************************
 
-    lesson 6.2
-
-    IRremote
-
-    http://www.keyestudio.com
-
-    \*/
-
-    \#include \<RremoteTank.h\>
-
-    int RECV_PIN = A0;//define the pin of IR receiver as A0
-
-    int LED_PIN=10;//define the pin of LED
-
-    int a=0;
-
-    IRrecv irrecv(RECV_PIN);
-
-    decode_results results;
-
-    void setup()
-
-    {
-
-    Serial.begin(9600);
-
-    irrecv.enableIRIn(); // Initialize the IR receiver
-
-    pinMode(LED_PIN,OUTPUT);//set LED_pin to OUTPUT
-
-    }
-
-    void loop() {
-
-    if (irrecv.decode(&results)) {
-
-    if(results.value==0xFF02FD \&a==0) // according to the above key value,
-    press“OK”on remote control , LED will be controlled
-
-    {
-
-    digitalWrite(LED_PIN,HIGH);//LED will be on
-
-    a=1;
-
-    }
-
-    else if(results.value==0xFF02FD \&a==1) //press again
-
-    {
-
-    digitalWrite(LED_PIN,LOW);//LED will be off
-
-    a=0;
-
-    }
-
-    irrecv.resume(); //receive the next value
-
-    }
-
-    }
 
 
 Upload code to development board, press“OK”key on remote control to make LED on
