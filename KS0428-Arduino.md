@@ -427,39 +427,26 @@ Seen from the above diagram, LED is linked with D2
 
 **Test Code**
 
-    /\*
 
-    keyestudio Mini Tank Robot V2
-
-    lesson 1.1
-
-    Blink
-
-    http://www.keyestudio.com
-
-    \*/
-
+    /*
+     keyestudio Mini Tank Robot V2
+     lesson 1.1
+     Blink
+     http://www.keyestudio.com
+    */
     void setup()
-
-    {
-
-    pinMode(2, OUTPUT);// initialize digital pin 2 as an output.
-
+     { 
+        pinMode(2, OUTPUT);// initialize digital pin 2 as an output.
     }
-
     void loop() // the loop function runs over and over again forever
-
+    
     {
-
-    digitalWrite(2, HIGH); // turn the LED on (HIGH is the voltage level)
-
-    delay(1000); // wait for a second
-
-    digitalWrite(2, LOW); // turn the LED off by making the voltage LOW
-
-    delay(1000); // wait for a second
-
+       digitalWrite(2, HIGH); // turn the LED on (HIGH is the voltage level)
+       delay(1000); // wait for a second
+       digitalWrite(2, LOW); // turn the LED off by making the voltage LOW
+       delay(1000); // wait for a second
     }
+
 
 
 
@@ -493,37 +480,23 @@ We’ve altered pins and connected LED to D10.
 
 **Test Code:**
 
-    /\*
-
-    keyestudio Mini Tank Robot V2
-
-    lesson 1.2
-
-    delay
-
-    http://www.keyestudio.com
-
-    \*/
-
-    void setup() { // initialize digital pin 10 as an output.
-
-    pinMode(10, OUTPUT);
-
+    /*
+     keyestudio Mini Tank Robot V2
+     lesson 1.2
+     delay
+     http://www.keyestudio.com
+    */
+    void setup() {  // initialize digital pin 10 as an output.
+       pinMode(10, OUTPUT);
     }
-
     // the loop function runs over and over again forever
-
     void loop() {
-
-    digitalWrite(10, HIGH); // turn the LED on (HIGH is the voltage level)
-
-    delay(100); // wait for 0.1 second
-
-    digitalWrite(10, LOW); // turn the LED off by making the voltage LOW
-
-    delay(100); // wait for 0.1 second
-
+       digitalWrite(10, HIGH); // turn the LED on (HIGH is the voltage level)
+       delay(100); // wait for 0.1 second
+       digitalWrite(10, LOW); // turn the LED off by making the voltage LOW
+       delay(100); // wait for 0.1 second
     }
+
 
 
 
@@ -580,54 +553,31 @@ Display color: red
 
 **(5) Test Code**
 
-    /\*
-
-    keyestudio Mini Tank Robot V2
-
-    lesson 2.1
-
-    pwm
-
-    http://www.keyestudio.com
-
-    \*/
-
+    /*
+     keyestudio Mini Tank Robot V2
+     lesson 2.2
+     pwm-slow
+     http://www.keyestudio.com
+    */
     int ledPin = 10; // Define the LED pin at D10
-
     int value;
-
-    void setup ()
-
+    void setup () 
     {
-
     pinMode (ledPin, OUTPUT); // initialize ledpin as an output.
-
     }
-
-    void loop ()
-
+    void loop () 
     {
-
-    for (value = 0; value \<255; value = value + 1)
-
+    for (value = 0; value <255; value = value + 1)
     {
-
     analogWrite (ledPin, value); // LED lights gradually light up
-
-    delay (5); // delay 5MS
-
+    delay (30); // delay 30MS
     }
-
-    for (value = 255; value\> 0; value = value-1)
-
+    for (value = 255; value> 0; value = value-1)
     {
-
     analogWrite (ledPin, value); // LED gradually goes out
-
-    delay (5); // delay 5MS
-
+    delay (30); // delay 30MS
     }}
-    
+
 
 
 1.  **Test Result**
@@ -713,53 +663,31 @@ wait to enter the next project.
 Let’s modify the value of delay and remain the pin unchanged, then observe how
 LED changes.
 
-    /\*
-
+    /*
     keyestudio Mini Tank Robot V2
-
     lesson 2.2
-
     pwm-slow
-
     http://www.keyestudio.com
-
-    \*/
-
+    */
     int ledPin = 10; // Define the LED pin at D10
-
     int value;
-
     void setup ()
-
     {
-
     pinMode (ledPin, OUTPUT); // initialize ledpin as an output.
-
     }
-
     void loop ()
-
     {
-
-    for (value = 0; value \<255; value = value + 1)
-
+    for (value = 0; value <255; value = value + 1)
     {
-
     analogWrite (ledPin, value); // LED lights gradually light up
-
     delay (30); // delay 30MS
-
     }
-
-    for (value = 255; value\> 0; value = value-1)
-
+    for (value = 255; value> 0; value = value-1)
     {
-
     analogWrite (ledPin, value); // LED gradually goes out
-
     delay (30); // delay 30MS
+    }}//**********************************************************
 
-    }}
 
 Upload code on the development board and the time interval of LED getting dark
 is longer.
@@ -813,37 +741,24 @@ experiment via photoresistor connected to A1. Let’s read its analog value.
 
 1.  **Test Code**
 
-    /\*
-
-    keyestudio Mini Tank Robot V2
-
-    lesson 3.1
-
-    photocell
-
-    http://www.keyestudio.com
-
-    \*/
-
-    int sensorPin = A1; // select the input pin for the photocell
-
-    int sensorValue = 0; // variable to store the value coming from the sensor
-
+    /*
+     keyestudio Mini Tank Robot V2
+     lesson 3.1
+     photocell
+     http://www.keyestudio.com
+    */
+    int sensorPin = A1;    // select the input pin for the photocell
+    int sensorValue = 0;  // variable to store the value coming from the sensor
     void setup() {
-
     Serial.begin(9600);
-
     }
-
     void loop() {
-
-    sensorValue = analogRead(sensorPin); // read the value from the sensor:
-
-    Serial.println(sensorValue); //Serial port prints the resistance value
-
+    sensorValue = analogRead(sensorPin);  // read the value from the sensor:
+    Serial.println(sensorValue);  //Serial port prints the resistance value
     delay(500);
-
     }
+    //******************************************************
+
 
 
 
@@ -875,53 +790,32 @@ photoresistor with a LED and view the status of LED.
 PWM restrains the brightness, so LED is linked with PWM pins. Connect LED to pin
 10, keep pin of photoresistor unchanged, then design the code:
 
-    /\*keyestudio Mini Tank Robot V2
-
+    /*keyestudio Mini Tank Robot V2
     lesson 3.2
-
     photocell-analog output
-
     http://www.keyestudio.com
-
-    \*/
-
-    int analogInPin = A1; // Analog input pin that the photocell is attached to 1
-
-    int analogOutPin = 10; // Analog output pin that the LED is attached to 10
-
-    int sensorValue = 0; // value read from the port
-
-    int outputValue = 0; // value output to the PWM (analog out)
-
+    */
+    int analogInPin = A1;  // Analog input pin that the photocell is attached to
+    int analogOutPin = 10; // Analog output pin that the LED is attached to
+    int sensorValue = 0;        // value read from the pot
+    int outputValue = 0;        // value output to the PWM (analog out)
     void setup() {
-
     Serial.begin(9600);
-
-    }
-
+     }
     void loop() {
-
-    // read the analog in value:
-
-    sensorValue = analogRead(analogInPin);
-
-    // map it to the range of the analog out:
-
-    outputValue = map(sensorValue, 0, 1023, 0, 255);
-
-    // change the analog out value:
-
-    analogWrite(analogOutPin, outputValue);
-
-    // wait 2 milliseconds before the next loop for the analog-to-digital
-
-    // converter to settle after the last reading:
-
-    Serial.println(sensorValue); //serial port prints the value of photoresistor
-
+      // read the analog in value:
+      sensorValue = analogRead(analogInPin);
+      // map it to the range of the analog out:
+      outputValue = map(sensorValue, 0, 1023, 0, 255);
+      // change the analog out value:
+      analogWrite(analogOutPin, outputValue);
+      // wait 2 milliseconds before the next loop for the analog-to-digital
+      // converter to settle after the last reading:
+     Serial.println(sensorValue);  //serial port prints the value of photoresistor
     delay(2);
-
     }
+    //***************************************************************
+
 
 
 
@@ -996,70 +890,40 @@ enough. If without connected power, the development board could be burnt.
 
 1.  **Test Code1**
 
-        /\*
-
-        keyestudio Mini Tank Robot V2
-
-        lesson 4.1
-
-        Servo
-
-        http://www.keyestudio.com
-
-        \*/
-
-        \#define servoPin 9 //servo Pin
-
-        int pos; //the angle variable of servo
-
-        int pulsewidth; // pulse width variable of servo
-
-        void setup() {
-
-        pinMode(servoPin, OUTPUT); //set servo pin to OUTPUT
-
-        procedure(0); //set the angle of servo to 0°
-
-        }
-
-        void loop() {
-
-        for (pos = 0; pos \<= 180; pos += 1) { // goes from 0 degrees to 180 degrees
-
+    /*
+    keyestudio Mini Tank Robot V2
+    lesson 4.1
+    Servo
+    http://www.keyestudio.com
+    */
+    #define servoPin 9  //servo Pin
+    int pos; //angle variable of servo
+    int pulsewidth; // pulse width variable of servo
+    void setup() {
+      pinMode(servoPin, OUTPUT);  //set servo pin to OUTPUT
+      procedure(0); //set the angle of servo to 0°
+    }
+    void loop() {
+      for (pos = 0; pos <= 180; pos += 1) { // goes from 0 degrees to 180 degrees
         // in steps of 1 degree
+        procedure(pos);              // tell servo to go to position in variable 'pos'
+        delay(15);                   //control the rotation speed of servo
+      }
+      for (pos = 180; pos >= 0; pos -= 1) { // goes from 180 degrees to 0 degrees
+        procedure(pos);              // tell servo to go to position in variable 'pos'
+        delay(15);                    
+      }
+    }
+    // function to control servo
+    void procedure(int myangle) {
+      pulsewidth = myangle * 11 + 500;  //calculate the value of pulse width
+      digitalWrite(servoPin,HIGH);
+      delayMicroseconds(pulsewidth);   //The duration of high level is pulse width
+      digitalWrite(servoPin,LOW);
+      delay((20 - pulsewidth / 1000));  // the cycle is 20ms, the low level last for the rest of time
+    }
+    //****************************************************************************
 
-        procedure(pos); // tell servo to go to position in variable 'pos'
-
-        delay(15); //control the rotation speed of servo
-
-        }
-
-        for (pos = 180; pos \>= 0; pos -= 1) { // goes from 180 degrees to 0 degrees
-
-        procedure(pos); // tell servo to go to position in variable 'pos'
-
-        delay(15);
-
-        }
-
-        }
-
-        // function to control servo
-
-        void procedure(int myangle) {
-
-        pulsewidth = myangle \* 11 + 500; //calculate the value of pulse width
-
-        digitalWrite(servoPin,HIGH);
-
-        delayMicroseconds(pulsewidth); //The duration of high level is pulse width
-
-        digitalWrite(servoPin,LOW);
-
-        delay((20 - pulsewidth / 1000)); // the cycle is 20ms, the low level last for
-        the rest of time
-
-        }
 
 
 
@@ -1074,53 +938,32 @@ The library file of servo is used in the following code
 
 1.  **Test Code2**
 
-        /\*
-
-        keyestudio Mini Tank Robot V2
-
-        lesson 4.2
-
-        servo
-
-        http://www.keyestudio.com
-
-        \*/
-
-        #include <Servo.h>
-
-        Servo myservo; // create servo object to control a servo
-
-        // twelve servo objects can be created on most boards
-
-        int pos = 0; // variable to store the servo position
-
-        void setup() {
-
-        myservo.attach(9); // attaches the servo on pin 9 to the servo object
-
-        }
-
-        void loop() {
-
-        for (pos = 0; pos <= 180; pos += 1) { // goes from 0 degrees to 180 degrees
-
+    /*
+     keyestudio Mini Tank Robot V2
+     lesson 4.2
+     servo
+     http://www.keyestudio.com
+    */
+    #include <Servo.h>
+    Servo myservo;  // create servo object to control a servo
+    // twelve servo objects can be created on most boards
+    int pos = 0;    // variable to store the servo position
+    void setup() {
+      myservo.attach(9);  // attaches the servo on pin 9 to the servo object
+    }
+    void loop() {
+      for (pos = 0; pos <= 180; pos += 1) { // goes from 0 degrees to 180 degrees
         // in steps of 1 degree
+        myservo.write(pos);              // tell servo to go to position in variable 'pos'
+        delay(15);                       // waits 15ms for the servo to reach the position
+      }
+      for (pos = 180; pos >= 0; pos -= 1) { // goes from 180 degrees to 0 degrees
+        myservo.write(pos);              // tell servo to go to position in variable 'pos'
+        delay(15);                       // waits 15ms for the servo to reach the position
+      }
+    }
+    //****************************************************************
 
-        myservo.write(pos); // tell servo to go to position in variable 'pos'
-
-        delay(15); // waits 15ms for the servo to reach the position
-
-        }
-
-        for (pos = 180; pos >= 0; pos -= 1) { // goes from 180 degrees to 0 degrees
-
-        myservo.write(pos); // tell servo to go to position in variable 'pos'
-
-        delay(15); // waits 15ms for the servo to reach the position
-
-        }
-
-        }
 
 
 
@@ -1313,6 +1156,7 @@ Gnd → Gnd(G)
 
 
 
+
 2.  **Test Result**
 
 Upload test code on the development board, open serial monitor and set baud rate
@@ -1438,6 +1282,11 @@ to the D10 pin.
         }
 
 //
+
+
+
+
+
 
 Upload test code to development board and block ultrasonic sensor by hand, then
 check if LED is on
