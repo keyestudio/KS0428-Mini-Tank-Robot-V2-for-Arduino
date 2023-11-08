@@ -2,6 +2,10 @@
 
 ![KS0428](media/40251bc51995d9dcddc5ef40e93ad7cd.png)
 
+## Read me frist
+
+ **Download the APP, Code and library from the link: <https://fs.keyestudio.com/KS0428>**
+
 ## 1.Introduction
 
 Nowadays, technological education such as VR, kids’ programming, and artificial intelligence, has become a mainstream in educational industry. Thereby, people attach more importance to STEAM education.
