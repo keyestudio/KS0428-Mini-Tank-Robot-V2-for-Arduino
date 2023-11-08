@@ -120,7 +120,7 @@ When you get this robot kit, please make sure that all the parts listed below ar
 
 ## 5.Install Arduino IDE and Driver
 
-### **Installing Arduino IDE**
+### Installing Arduino IDE
 
 When you get control board, you need to download Arduino IDE and driver firstly.
 
@@ -140,7 +140,7 @@ You can choose between the Installer (.exe) and the Zip packages. We suggest you
 
 You just need to click JUST DOWNLOAD.
 
-###  **Keyestudio V4.0 Development Board**
+###  Keyestudio V4.0 Development Board
 
 You need to know that keyestudio V4.0 development board is the core of this smart car.
 
@@ -171,7 +171,7 @@ It contains everything needed to support the microcontroller. Simply connect it 
 | Clock Speed                 | 16 MHz                                                   |
 | LED_BUILTIN                 | D13                                                      |
 
-###  **Installing the driver for Windows system**
+###  Installing the driver for Windows system
 
 Let’s install the driver of keyestudio V4.0 board. The USB-TTL chip on V4.0 board adopts CP2102 serial chip.
 
@@ -211,7 +211,7 @@ Open device manager, you will find the yellow exclamation mark disappear. The dr
 
 ![123](media/9b8ddc1c8af12e5f363817d49cea8571.png)
 
-###  **Installing the driver for MAC system**
+###  Installing the driver for MAC system
 
 **MAC system**
 
@@ -271,7 +271,7 @@ Then click Allow
 
 Successfully installed ![{46A164EF-E3D2-CBE2-8CAC-B67C253E68AB}](media/7c26ef0b6e1d36b49c1d80dc4f153707.jpeg)
 
-###  **Arduino IDE Setting**
+###  Arduino IDE Setting
 
 Click![](media/9035a01879f001b75827e908d7dceb2d.png)icon，open Arduino IDE.
 
@@ -299,7 +299,7 @@ Before uploading the program to the board, let’s demonstrate the function of e
 
 4- Used to send the serial data received from board to the serial monitor.
 
-###  **Start First Program**
+###  Start First Program
 
 Open the file to select Example, choose BLINK from BASIC, as shown below:
 
