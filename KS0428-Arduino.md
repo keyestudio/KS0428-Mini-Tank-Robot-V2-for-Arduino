@@ -366,11 +366,11 @@ The whole project begins with basic programs. Starting from simple to complex, t
 
 ![图片1](media/4c5aa10c3eda7ed4c970b514f5d08da4.png)
 
-####   **Description**
+   **Description**
 
 For starters and enthusiasts, LED Blink is a fundamental program. LED, the abbreviation of light emitting diodes, consists of Ga, As, P, N chemical compounds and so on. The LED can flash in diverse color by altering the delay time in the test code. When in control, power on GND and VCC, the LED will be on if S end is in high level; nevertheless, it will go off.
 
-####  **Specification**
+  **Specification**
 
 ![图片2](media/16fbd30bf613a97959a7082a684d675d.png)
 
@@ -382,7 +382,7 @@ Pin spacing: 2.54mm
 
 LED display color: red
 
-#### **Components**
+ **Components**
 
 ![](media/de84625c18a4baffe3df7d08ae531229.png)
 
@@ -396,13 +396,13 @@ This sensor shield can be inserted into 3pin sensor modules and breaks out some 
 
 ![](media/d12f81260114d999236bce072928aa43.png)
 
-#### **Connection Diagram**
+ **Connection Diagram**
 
 ![](media/65d77026e61311292cfaadc426d2cb11.png)
 
 Seen from the above diagram, LED is linked with D2
 
-#### **Test Code**
+ **Test Code**
 
 
 ```c
@@ -428,7 +428,7 @@ void loop() // the loop function runs over and over again forever
 
 
 
-#### **Test Result**
+ **Test Result**
 
 (There will be contradiction about serial communication between code and Bluetooth when uploading code. Therefore, don’t link with Bluetooth module before uploading code.)
 
@@ -436,24 +436,24 @@ Upload the program on the development board, LED flickers at the interval of 1s.
 
 ![](media/b42492b0ebdd2cc355d6082c6d3484c9.png)
 
-#### **Code Explanation**
+ **Code Explanation**
 
 **pinMode(2，OUTPUT) -** Set pin2 to OUTPUT
 
 **digitalWrite(2，HIGH) -** When set pin2 to HIGH level(output 5V) or to LOW
 level(output 0V)
 
-####  **Extension Practice**
+  **Extension Practice**
 
 We succeed in blinking LED. Next, let’s observe what LED will change if we modify pins and delay time.
 
-#### **Connection Diagram**
+ **Connection Diagram**
 
 ![](media/5ed1c26f781c7ad71201e050f06b862c.png)
 
 We’ve altered pins and connected LED to D10.
 
-#### **Test Code**
+ **Test Code**
 
 ```c
 /*
@@ -481,7 +481,7 @@ The test result shows that the LED flashes faster. Therefore, we can draw a conc
 
 ### Project 2: Adjust LED Brightness
 
-#### **(1) Description**
+ **(1) Description**
 
 In previous lesson, we control LED on and off and make it blink.
 
@@ -497,7 +497,7 @@ For the Arduino digital port voltage output, there are only LOW and HIGH, which 
 If output five hundred 1, that is 5V; if all of which is 1, that is 0V. If output 010101010101 in this way then the output port is 2.5V, which is like showing movie. The movie we watch are not completely continuous. It actually outputs 25 pictures per second. In this case, the human can’t tell it, neither
 does PWM. If want different voltage, need to control the ratio of 0 and 1. The more 0,1 signals output per unit time, the more accurately control.
 
-#### **(2) Specification**
+ **(2) Specification**
 
 Control interface: digital port
 
@@ -507,15 +507,15 @@ Pin spacing: 2.54mm
 
 Display color: red
 
-#### **(3) Components**
+ **(3) Components**
 
 ![](media/e5f9263773fca0e3c4f567a709a61de5.png)
 
-#### **(4) Connection Diagram**
+ **(4) Connection Diagram**
 
 ![](media/5ed1c26f781c7ad71201e050f06b862c.png)
 
-#### **(5) Test Code**
+ **(5) Test Code**
 
 ```c
 /*
@@ -546,11 +546,11 @@ delay (30); // delay 30MS
 
 
 
-####  **Test Result**
+  **Test Result**
 
 Upload test code successfully, LED gradually changes from bright to dark, like human’s breath, rather than turning on and off immediately.
 
-####   **Code Explanation**
+   **Code Explanation**
 
 When we need to repeat some statements, we could use FOR statement.
 
@@ -608,7 +608,7 @@ PWM mostly is used for adjusting the LED brightness or rotation speed of motor.
 
 It plays a vital role in controlling smart robot car. I believe that you can’t wait to enter the next project.
 
-#### **Extension Practice：**
+ **Extension Practice：**
 
 Let’s modify the value of delay and remain the pin unchanged, then observe how LED changes.
 
@@ -646,7 +646,7 @@ Upload code on the development board and the time interval of LED getting dark i
 
 **![unnamed (1)](media/36e7e08764ed3c61a1c22f86be8c23d9.jpeg)**
 
-####  **Description**
+  **Description**
 
 The photoresistor is a special resistor made of semiconductor materials such as CdS or Selenide septum. The surface is also coated with moisture-proof resin, which has a photoconductive effect. It is sensitive to ambient light. Its resistance varies from different light intensities.
 
@@ -658,7 +658,7 @@ On the contrary, the weaker the light intensity, the smaller the voltage of anal
 
 Based on that, we can use the photocell module to read the analog value, so get the ambient light intensity.
 
-####  **Specification**
+  **Specification**
 
 ![](media/0d9daba6454ef099fe1ceb0e6cb56ec4.png)
 
@@ -672,15 +672,15 @@ Easy installation: with screw fixing holes
 
 Pin spacing: 2.54mm
 
-#### **Components**![](media/7a2e28ba41ee2d65217120f3070e24d4.png)
+ **Components**![](media/7a2e28ba41ee2d65217120f3070e24d4.png)
 
-#### **Connection Diagram：**
+ **Connection Diagram：**
 
 ![](media/288f30f0c9c705f2318402ba969d9351.png)
 
 The two photoresistor sensors are linked with A1 and A2, then finish the experiment via photoresistor connected to A1. Let’s read its analog value.
 
-####  **Test Code**
+  **Test Code**
 
 ```c
 /*
@@ -704,12 +704,12 @@ delay(500);
 
 
 
-#### **Test Result**
+ **Test Result**
 
 Upload code on development board, open serial monitor, check if its value diminishes when covering photoresistor. However, the value increases when uncovered.
 ![](media/7c6ae738366c565c9a952877b1aebb09.png)
 
-####  **Code Explanation**
+  **Code Explanation**
 
 **analogRead(sensorPin)：** read the analog value of photoresistor via analog ports.
 
@@ -717,7 +717,7 @@ Upload code on development board, open serial monitor, check if its value dimini
 
 **Serial.println** : Serial port prints and word wrap.
 
-####  **Extension Practice**
+  **Extension Practice**
 
 We’ve known how to read the value of photoresistor. Let’s combine the photoresistor with a LED and view the status of LED.
 
@@ -762,7 +762,7 @@ Upload code, press it by hand to observe the LED brightness.
 
 ![IMG_256](media/ae51208a3f560ad6edefe370eb588c13.png)
 
-####  **Description**
+  **Description**
 
 Servo motor is a position control rotary actuator. It mainly consists of housing, a circuit board, a core-less motor, a gear and a position sensor. Its working principle is that the servo receives the signal sent by MCUs or receivers and produces a reference signal with a period of 20ms and width of 1.5ms, then compares the acquired DC bias voltage to the voltage of the potentiometer and obtain the voltage difference output.
 
@@ -780,7 +780,7 @@ The corresponding servo angles are shown below:
 
 ![](media/ddc74f62dc936c925d28d70a1a9c2214.png)
 
-####  **Specification**
+  **Specification**
 
 Working voltage: DC 4.8V \~ 6V
 
@@ -798,11 +798,11 @@ Stop current: ≦ 850mA (DC 4.8V) ≦ 1000mA (DC 6V)
 
 Standby current: 3 ± 1mA (DC 4.8V) 4 ± 1mA (DC 6V)
 
-#### **Components**
+ **Components**
 
 ![Img](./media/img-20230418081358.png)
 
-####  **Connection Diagram：**
+  **Connection Diagram：**
 
 ![](media/dac1c422778c7cb7812d1defb2816ea4.png)
 
@@ -810,7 +810,7 @@ Standby current: 3 ± 1mA (DC 4.8V) 4 ± 1mA (DC 6V)
 
 The servo has to be connected to external power due to its high demand for driving servo current. Generally, the current of development board is not enough. If without connected power, the development board could be burnt.
 
-#### **Test Code 1**
+ **Test Code 1**
 
 ```c
 /*
@@ -857,7 +857,7 @@ There is another guide for restraining servo---- servo library file, the followi
 
 The library file of servo is used in the following code.
 
-####  **Test Code 2**
+  **Test Code 2**
 
 ```c
 /*
@@ -889,13 +889,13 @@ void loop() {
 
 
 
-####   **Test Result**
+   **Test Result**
 
 Upload code successfully and power on, servo swings in the range of 0° to 180°.
 
 The result is the same. We usually control it by library file.
 
-####  **Code Explanation**
+  **Code Explanation**
 
 Arduino comes with **\#include \<Servo.h\>** (servo function and statement）
 
@@ -913,7 +913,7 @@ The following are some common statements of the servo function:
 
 ### Project 5: Ultrasonic Sensor
 
-####  **Description**
+  **Description**
 
 ![15160984609_f127220a5d_o](media/0180b169a1c3b228394b43df704fac32.png)
 
@@ -921,7 +921,7 @@ The HC-SR04 ultrasonic sensor uses sonar to determine distance to an object like
 
 The HC-SR04 or the ultrasonic sensor is being used in a wide range of electronics projects for creating obstacle detection and distance measuring application as well as various other applications. Here we have brought the simple method to measure the distance with arduino and ultrasonic sensor and how to use ultrasonic sensor with arduino.
 
-####  **Specification**
+  **Specification**
 
 ![](media/9779999818cbbe4e1adf5b57081be431.png)
 
@@ -941,7 +941,7 @@ Measuring Angle: 30 degree
 
 Trigger Input Pulse width: 10uS
 
-#### **Components**
+ **Components**
 
 ![](media/97b9dd6060b2d1059a5996ca542aad2a.png)
 
@@ -967,7 +967,7 @@ Circuit diagram of ultrasonic sensor:
 
 ![图片1hi;.hkl;hlhjl](media/a25028af84d6c7c94382c2a907101241.jpeg)
 
-####  **Connection Diagram**
+  **Connection Diagram**
 
 ![](media/bb05a5079dee74c9540be36eb88f659c.png)
 
@@ -983,7 +983,7 @@ Echo → 4(S)
 
 Gnd → Gnd(G)
 
-#### **Test Code**
+ **Test Code**
 
 ```c
 /*
@@ -1026,13 +1026,13 @@ delay(250);
 
 
 
-#### **Test Result**
+ **Test Result**
 
 Upload test code on the development board, open serial monitor and set baud rate to 9600. The detected distance will be displayed, and the unit is cm and inch. Hinder the ultrasonic sensor by hand, the displayed distance value gets smaller.
 
 ![](media/db57c5b23e2d6dd41ad70d6331297262.png)
 
-####  **Code Explanation**
+  **Code Explanation**
 
 **int trigPin = 5;** this pin is defined to transmit ultrasonic waves, generally output.
 
@@ -1050,7 +1050,7 @@ Or in inches: 13503.9in/s = 0.0135in/uS = 1/74in/uS
 
 We need to divide the travel time by 2 because we have to take into account that the wave was sent, hit the object, and then returned back to the sensor.
 
-####  **Extension Practice:**
+  **Extension Practice:**
 
 We have measured the distance displayed by the ultrasonic. How about controlling the LED with the measured distance? Let's try it and connect an LED light module to the D10 pin.
 
@@ -1107,7 +1107,7 @@ Upload test code to development board and block ultrasonic sensor by hand, then 
 
 ### Project 6: IR Reception
 
-####  **Description**
+  **Description**
 
 There is no doubt that infrared remote control is ubiquitous in daily life. It is used to control various household appliances, such as TVs, stereos, video recorders and satellite signal receivers. Infrared remote control is composed of infrared transmitting and infrared receiving systems, that is, an infrared remote control and infrared receiving module and a single-chip microcomputer
 capable of decoding.​
@@ -1123,7 +1123,7 @@ When the remote control button is pressed, the remote control sends out an infra
 Infrared receiver we use is an infrared receiver module. Mainly composed of an infrared receiver head, it is a device that integrates reception, amplification, and demodulation. Its internal IC has completed demodulation, and can achieve from infrared reception to output and be compatible with TTL signals.
 Additionally, it is suitable for infrared remote control and infrared data transmission. The infrared receiving module made by the receiver has only three pins, signal line, VCC and GND. It is very convenient to communicate with arduino and other microcontrollers.
 
-####  **Specification**
+  **Specification**
 
 ![](media/dce6a373b4c3ef6734e0f813a4d40ee5.png)
 
@@ -1141,11 +1141,11 @@ Frequency: 38khz
 
 Receiving Distance: 10m
 
-#### **Components**
+ **Components**
 
 ![](media/af294f339cd6af669d0e1b836cf4b6de.png)
 
-####  **Connection Diagram**
+  **Connection Diagram**
 
 ![](media/1b347b1a87ee17dfa1d69f811670121c.png)
 
@@ -1153,7 +1153,7 @@ Respectively link “-”、“+” and S of IR receiver module with G(GND）, V
 
 **Attention:**  On the condition that digital ports are not available, analog ports can be regarded as digital ports. A0 equals to D14, A1 is equivalent to digital 15.
 
-####  **Test Code**
+  **Test Code**
 
 Firstly import library file of IR receiver module(refer to how to import Arduino library file) before designing code.
 
@@ -1184,7 +1184,7 @@ Firstly import library file of IR receiver module(refer to how to import Arduino
 
 
 
-####  **Test Result**
+  **Test Result**
 
 Upload test code, open serial monitor and set baud rate to 9600, point remote control to IR receiver and the corresponding value will be shown, if pressing so long, the error codes will appear
 
@@ -1194,13 +1194,13 @@ Below we have listed out each button value of keyestudio remote control. So you 
 
 ![图形1](media/ebcf0cb2055f7784505f76ceeaef9f47.jpeg)
 
-####   **Code Explanation**
+   **Code Explanation**
 
 **irrecv.enableIRIn():** after enabling IR decoding, the IR signals will be received, then function“decode()”will check continuously if decode successfully.
 
 **irrecv.decode(&results):** after decoding successfully, this function will come back to “true”, and keep result in “results”. After decoding a IR signals, run the resume()function and receive the next signal.
 
-####  **Extension Practice**
+  **Extension Practice**
 
 We decoded the key value of IR remote control. How about controlling LED by the measured value? We could operate an experiment to affirm. Attach an LED to D10, then press the keys of remote control to make LED light on and off.
 
@@ -1250,7 +1250,7 @@ and off.
 
 ### Project 7: Bluetooth Remote Control
 
-####  **Description**
+  **Description**
 
 Bluetooth, a simple wireless communication module, has went viral since the last few decades and been used in most of the battery-powered devices for its easy-to-use function.
 
@@ -1261,7 +1261,7 @@ Over the few years, there are many things changed including data transmission ra
 
 Here we are going to learn about HM-10 BLE 4.0 with Arduino Board. The HM-10 is a readily available Bluetooth 4.0 module. This module is used for establishing wireless data communication. The module is designed by using the Texas Instruments CC2540 or CC2541 Bluetooth low energy (BLE) System on Chip (SoC).
 
-####  **Specification**
+  **Specification**
 
 Bluetooth protocol: Bluetooth Specification V4.0 BLE.
 
@@ -1289,11 +1289,11 @@ Power supply: 5V DC.
 
 Working temperature: –5 to +65 Centigrade.
 
-#### **Components**
+ **Components**
 
 ![](media/5f139ecf081bc938c1875890682369fa.png)
 
-#### **Connection Diagram**
+ **Connection Diagram**
 
 **1. STATE:** *state test pins, connected to internal LED, generally keep it unconnected.*
 
@@ -1309,7 +1309,7 @@ Working temperature: –5 to +65 Centigrade.
 
 ![](media/a4e826d358ac461e6d711d03bf6ad438.png)
 
-####  **Test Code**
+  **Test Code**
 
 ```c
 /*
@@ -1339,13 +1339,13 @@ void loop() {
 
 After uploading code on development board, then insert Bluetooth module, wait for the command from cellphone.
 
-####  **Download APP**
+  **Download APP**
 
 The code is for reading the received signal, and we also need a stuff to send signal. In this project, we send signal to control robot car via cellphone.
 
 Then we need to download the APP.
 
-#####   **iOS system**
+#   **iOS system**
 
 **Note: Allow APP to access “location” in settings of your cellphone when connecting to Bluetooth module. Otherwise, Bluetooth may not be connected.**
 
@@ -1353,7 +1353,7 @@ Enter APP STORE to search **BLE Scanner 4.0, then download it.**
 
 ![](media/17adf8dc7318b8104373f0d518398279.png)
 
-#####   **Android system**
+#   **Android system**
 
 Enter [Google Play](https://developer.android.google.cn/distribute?hl=zh-cn) to find out **BLE Scanner, then download.**
 
@@ -1393,13 +1393,13 @@ Enter [Google Play](https://developer.android.google.cn/distribute?hl=zh-cn) to 
 
 ![](media/5254b35b30451fc6dbf7de998cf5e16b.png)
 
-#### **Code Explanation**
+ **Code Explanation**
 
 **Serial.available()** : The current rest characters when return to buffer area. Generally, this function is used to judge if there is data in buffer. When Serial.available()\>0, it means that serial receives the data and can be read.
 
 **Serial.read()：**Read a data of a Byte in buffer of serial port, for instance, device sends data to Arduino via serial port, then we could read data by “Serial.read()”.
 
-#### **Extension Practice**
+ **Extension Practice**
 
 We could send a command via cellphone to turn a LED on and off .
 
@@ -1444,7 +1444,7 @@ Click“Write”on APP, when you enter 1, LED will be on; when you input 0, LED 
 
 ### Project 8: Motor Driving and Speed Control
 
-#### **Description**
+ **Description**
 
 ![](media/705bf5838ebbe325e6861dcf278ff3c0.png)
 
@@ -1452,7 +1452,7 @@ There are many ways to drive a motor. Our robot car uses the most common solutio
 
 We designed a shield based on the circuit of L298p. The stacked design reduces the technical difficulty of using and driving the motor.
 
-#### **Specification**
+ **Specification**
 
 Circuit Diagram for L298P Board
 
@@ -1474,7 +1474,7 @@ Circuit Diagram for L298P Board
 
 ![0007 (1)](media/753e2871828f213cfc96b621b79a172d.jpeg)
 
-####  **Drive Robot to Move**
+  **Drive Robot to Move**
 
 Through the above circuit diagram, the direction pin of A motor is D12, and speed pin is D3; D13 is the direction pin of B motor, D11 is speed pin.
 
@@ -1494,13 +1494,13 @@ PWM decides 2 motors to turn on so as to drive the robot car. The PWM value is i
 
 ![](media/11cb6e1929d81df3340e11dd8c9587c0.png)
 
-####  **Connection Diagram**
+  **Connection Diagram**
 
 ![](media/d35ffe6c0c275548f40bcafb42a93da1.jpeg)
 
 **Note:** the 4Pin terminal block is marked with silkscreen 1234. The red line of right rear motor is connected to terminal 1, black line is linked with end 2. The red line of left front motor is attached to terminal 3, black line is linked with port 4.
 
-####   **Test Code**
+   **Test Code**
 
 ```c
 /*
@@ -1563,17 +1563,17 @@ digitalWrite(MR_Ctrl,HIGH);//set the direction control pin of right motor to HIG
 
 
 
-####  **Test Result**
+  **Test Result**
 
 Hook up by connection diagram, upload code and power on, the smart car goes forward and back for 2s, turns left and right for 2s, stops for 2s and alternately.
 
-#### **Code Explanation**
+ **Code Explanation**
 
 **digitalWrite(ML_Ctrl,LOW):** the rotation direction of motor is decided by the high/low level and and the pins that decide rotation direction are digital pins.
 
 **analogWrite(ML_PWM,200):** the speed of motor is regulated by PWM, and the pins that decide the speed of motor must be PWM pins.
 
-####  **Extension Practice**
+  **Extension Practice**
 
 Adjust the speed that PWM controls the motor, and hook up in the same way.
 
@@ -1635,14 +1635,14 @@ Upload code successfully, the motors rotate faster.
 
 ### Project 9: 8*16 LED Board
 
-####  **Description**
+  **Description**
 
-![KS0357  8x16 LED灯板 黑色  (1)](media/2c6708cb4d9bb775c0b6001b47ad0392.jpeg)
+![](media/2c6708cb4d9bb775c0b6001b47ad0392.jpeg)
 
 If you add an 8\*16 LED board to the robot, it will be amazing. Keyestudio's 8\*16 dot matrix can meet this requirement. Fueled by it, you can create facial emoticons, patterns or other interesting displays all by yourself. This 8\*16 LED light board comes with 128 LEDs. The data of the microprocessor (arduino) communicates with the AiP1640 through the two-wire bus interface, so as to
 control the 128 LEDs on the module, which produce the patterns you need on dot matrix. To facilitate wiring, a HX-2.54 4Pin wiring is provided.
 
-####   **Specification**
+   **Specification**
 
 Working voltage: DC 3.3-5V
 
@@ -1656,7 +1656,7 @@ Working temperature: -40\~80℃
 
 Communication method: two-wire bus
 
-#### **Components**
+ **Components**
 
 ![](media/710db54aaa3ca9ecc88f30139f1df6ab.png)
 
@@ -1726,13 +1726,13 @@ As shown below, press the left mouse button to select, the right button to cance
 
 ![](media/586e88bf13c61b0918046437ed7f6796.png)
 
-####  **Connection Diagram**
+  **Connection Diagram**
 
 ![](media/cdcb777e436fab5018611de1c65b6269.png)
 
 Wiring note: The GND, VCC, SDA, and SCL of the 8x16 LED panel are respectively connected to -(GND), + (VCC), A4 and A5 of the keyestudio sensor expansion board for two-wire serial communication. (Note: This pin is connected to arduino IIC, but this module is not IIC communication. It can be linked with any two pins.)
 
-####   **Test Code**
+   **Test Code**
 
 The code that shows smile face
 
@@ -1825,13 +1825,13 @@ void IIC_end()
 
 
 
-####  **Test Result**
+  **Test Result**
 
 Wire according to connection diagram. The DIP switch is dialed to the right end and power on, the smile face appears on the dot matrix.
 
 ![](media/6652fae30a9d37cf218277c23ea5d349.png)
 
-####  **Extension Practice**
+  **Extension Practice**
 
 We use the modulo tool ([http://dotmatrixtool.com/\#](http://dotmatrixtool.com/))to make the dot matrix alternately display, go front and stop patterns then clear the patterns, and the time interval is 2000 milliseconds.
 
@@ -1975,7 +1975,7 @@ Upload code on development board, 8\*16 dot matrix displays front , back and sto
 
 ![](media/829f30a3305322b15372ca0df6213ebb.png)
 
-####  **Description**
+  **Description**
 
 We’ve introduce how to use various sensors, modules.
 
@@ -1991,7 +1991,7 @@ We make a flow chart based on the above logic table, as shown below:
 
 ![](media/f992d74e58ef513c183e2855c6d605b2.png)
 
-####  **Connection Diagram**
+  **Connection Diagram**
 
 ![](media/82fab73681e76e56e763a4e60bf1139d.jpeg)
 
@@ -2010,7 +2010,7 @@ The 4Pin terminal block is marked with silkscreen 1234. The red line of right re
 | +                        | →    | V（VCC）          |
 | S                        | →    | A2                |
 
-####   **Test Code**
+   **Test Code**
 
 ```c
 /*
@@ -2093,7 +2093,7 @@ void Car_Stop()
 
 
 
-####  **Test Result**
+  **Test Result**
 
 Upload code on keyestudio V4.0 development board, DIP switch is dialed to right end and power on, the smart robot follows light to move.
 
@@ -2101,7 +2101,7 @@ Upload code on keyestudio V4.0 development board, DIP switch is dialed to right 
 
 ![](media/a25b9ad6fd5992837a9a716fdb96de9f.png)
 
-####  **Description**
+  **Description**
 
 In this program, the ultrasonic sensor detects the distance of obstacle to send signals that control the robot car. Next, let’s show you how to make an obstacle avoidance car.
 
@@ -2110,17 +2110,17 @@ In this program, the ultrasonic sensor detects the distance of obstacle to send 
 ![Img](./media/img-20230417174424.png)
 ![Img](./media/img-20230417174442.png)
 
-#### **Flow chart**
+ **Flow chart**
 
 ![](media/7fec0691e9a512458f0354cceca7f8ef.png)
 
-####  **Connection Diagram：**
+  **Connection Diagram：**
 
 ![](media/a6f411177d855e59b938933d74bf3a9c.jpeg)
 
 Note: “-”、“+” and “S” pins of servo are respectively attached to G（GND）, V（VCC）and D9 of expansion board. The VCC, Trig, Echo and Gnd of ultrasonic sensor are linked with 5v(V), 5(S), Echo and Gnd(G) of expansion board.
 
-####   **Test Code:**
+   **Test Code:**
 
 ```c
 /*
@@ -2275,7 +2275,7 @@ Car_left();  //robot turns left
 
 
 
-####  **Test Result**
+  **Test Result**
 
 Upload code successfully, DIP switch is dialed to the right end and power on, tank robot goes forward and automatically avoids the obstacle.
 
@@ -2283,7 +2283,7 @@ Upload code successfully, DIP switch is dialed to the right end and power on, ta
 
 ![](media/44c5d070ee7284b973c4d8805295b049.png)
 
-####   **Description**
+   **Description**
 
 In project 11, we made an obstacle avoidance car. In fact, we only need to alter a test code to transform an obstacle avoidance car into a following car. In this lesson, we will make an ultrasonic following robot. The ultrasonic sensor detects the distance between smart car and the obstacle to drive tank car to move.
 
@@ -2301,11 +2301,11 @@ In project 11, we made an obstacle avoidance car. In fact, we only need to alter
 | If             | distance ≤10                             |                         |
 | Status         | Stop（set PWM to 200）                   |                         |
 
-####  **Flow chart**
+  **Flow chart**
 
 ![](media/051b2836d2db4d80665d6c24869c48fa.png)
 
-####   **Connection Diagram**
+   **Connection Diagram**
 
 ![](media/399c91cb82b7407f8f8ed473c270f16a.jpeg)
 
@@ -2318,7 +2318,7 @@ Wire-up note:
 | SDA              | → | SDA               |
 | SCL              | → | SCL               |
 
-####   **Test Code**
+   **Test Code**
 
 ```c
   /*
@@ -2507,7 +2507,7 @@ float checkdistance() {
 
 
 
-####  **Test Result**
+  **Test Result**
 
 Upload code successfully, DIP switch is dialed to the right end, the servo rotates to 90°, “V” is shown on 8X16 LED panel and smart car moves as the obstacle moves.
 
@@ -2540,17 +2540,17 @@ IR remote control is one of most ubiquitous control, applied in TV, electric fan
 | ![](media/dcada1dd0e8a75bc9f041e039bb15755.png) | FF7A85                                  | Rotate to right（PWM set to 200）   |
 |                                                 |                                         | 8X16 LED panel shows rightward icon |
 
-####  **Flow Chart**
+  **Flow Chart**
 
 ![](media/3bf0b51993625597e26b1a776c1ad65e.png)
 
-####   **Connection Diagram**
+   **Connection Diagram**
 
 ![](media/7c5036b157052d37b435023c802b804d.jpeg)
 
 Attention：GND,VCC, SDA, SCL of 8x16 LED panel are respectively linked with\-（GND), +（VCC), SDA ,SCL. And “-”、“+” and S of IR receiver module are attached to G（GND), V（VCC) and A0 on sensor shield. On the condition of insufficient digital ports, the analog ports can be treat as digital ports. A0 equals to digital 14, A1 is like digital 15.
 
-####   **Test Code**
+   **Test Code**
 
 ```c
 /*
@@ -2778,7 +2778,7 @@ void Car_T_right()
 
 
 
-####   **Test Result**
+   **Test Result**
 
 Upload code successfully and power on, the smart robot can be controlled by IR remote. At the same time, the corresponding pattern is shown on 8X16 LED panel.
 
@@ -2786,7 +2786,7 @@ Upload code successfully and power on, the smart robot can be controlled by IR r
 
 ![](media/32068221ca46f6fdf16f38fccbd2f2ec.png)
 
-####  **Description**
+  **Description**
 
 We’ve learned the basic knowledge of Bluetooth. In this lesson, we will make a Bluetooth remote smart car. In the experiment, we default the HM-10 Bluetooth module as a Slave and the cellphone as a Host.
 
@@ -2796,7 +2796,7 @@ There is a guide to how to download and install APP in the document for your ref
 
 ![IMG_256](media/753263f3633049683f3dd29c4253f63d.png)
 
-####  **Test Code**
+  **Test Code**
 
 ```c
 /*
@@ -2828,7 +2828,7 @@ The detected character and corresponding function:
 
 ![](media/599ed500a72310376de208f18c4d5295.png)
 
-####  **Connection Diagram**
+  **Connection Diagram**
 
 ![](media/9d12898b15e8e9f0bc1e0bcdfcf89f2a.jpeg)
 
@@ -2842,7 +2842,7 @@ The detected character and corresponding function:
 | SCL                                                                                    | → | SCL             |
 | Insert Bluetooth module vertically, you don’t need to attach to its STATE and BRK pins |   |                 |
 
-#### **Test Code**
+ **Test Code**
 
 <span style="color: rgb(255, 76, 65);">Note:</span> Remove the Bluetooth module before uploading test code. Otherwise, you will fail to upload test code.
 
@@ -3032,19 +3032,19 @@ void Car_T_right()
 
 
 
-####  **Test Result**
+  **Test Result**
 
 Upload code successfully, DIP switch is dialed to the right end and power on. After connecting Bluetooth, we could drive smart car to move by Bluetooth App.
 
-Press![Screenshot_2019-06-21-14-48-54-58](media/812184b6c87ccf6f0d297ada3eb7329f.png)，tank robot goes forward；
+Press![](media/812184b6c87ccf6f0d297ada3eb7329f.png)，tank robot goes forward；
 
-click![Screenshot_2019-06-21-14-48-54-58](media/51b9de7f9319cd7f13af7e892f55e330.png)，smart car goes back；
+click![](media/51b9de7f9319cd7f13af7e892f55e330.png)，smart car goes back；
 
-press![Screenshot_2019-06-21-14-48-54-58](media/4215dcc177dc5e58743eb6897e0c4c62.png)button，tank robot turns left；click![Screenshot_2019-06-21-14-48-54-58](media/789b989a7a110ce3c08ba82a7a8a0fed.png)，robot turns right；
+press![](media/4215dcc177dc5e58743eb6897e0c4c62.png)button，tank robot turns left；click![](media/789b989a7a110ce3c08ba82a7a8a0fed.png)，robot turns right；
 
-hold![Screenshot_2019-06-21-14-48-54-58](media/96f8d8acf6ae02320f69583f9a146e96.png)，it stops.
+hold![](media/96f8d8acf6ae02320f69583f9a146e96.png)，it stops.
 
-Click![Screenshot_2019-06-21-14-48-54-58](media/89977c8a260abc7a1e43348047d55ffb.png)to enable gravitational control，tap![Screenshot_2019-06-21-14-48-54-58](media/89977c8a260abc7a1e43348047d55ffb.png)again, end gravitational control. At same time,8X16 LED panel on robot car displays the corresponding pattern.
+Click![](media/89977c8a260abc7a1e43348047d55ffb.png)to enable gravitational control，tap![](media/89977c8a260abc7a1e43348047d55ffb.png)again, end gravitational control. At same time,8X16 LED panel on robot car displays the corresponding pattern.
 
 # 8.The final fully functional project
 
@@ -3057,7 +3057,7 @@ After checking all the parts in this kit, we need to mount the tank robot. Let�
 
 **Note: Peel the plastic film off the board first when installing smart car.**
 
-#### Step 1: Install Bottom Motor
+ Step 1: Install Bottom Motor
 
 Prepare the parts as follows:
 
@@ -3085,7 +3085,7 @@ Prepare the parts as follows:
 
 ![](media/2027ea2890822d6f22db89dfa69efcc5.png)![](media/9f9048e1ad89fa5cfe85d0f62e728387.png)
 
-#### Step 2: Install Driver Wheel
+ Step 2: Install Driver Wheel
 
 Prepare the parts as follows:
 
@@ -3107,7 +3107,7 @@ Prepare the parts as follows:
 
 ![](media/d9c59c894110ce30d9d39bbadc866793.png)![](media/e73ffe5ae70d53c5a750a6948a93816d.png)![](media/65d417a5b9135fae7e3bcca041624445.png)
 
-#### Step 3: Install the Battery Holder
+ Step 3: Install the Battery Holder
 
 Prepare the parts as follows:
 
@@ -3137,7 +3137,7 @@ Move to fix the metal holder on the motor wheel with four M4\*40MM inner hex scr
 
 ![](media/d763b76d99dcae8d25c0e8f7190006f5.png)![](media/b5dcec9193e5ceedbb1f038e69d9d544.png)
 
-#### Step 4: Mount Acrylic Board and Sensors
+ Step 4: Mount Acrylic Board and Sensors
 
 -   Acrylic Board \* 2
 
@@ -3165,7 +3165,7 @@ Move to fix the metal holder on the motor wheel with four M4\*40MM inner hex scr
 
 ![6](media/ff92e5f5b82a79be5a2a956b621e99b3.jpeg)![1](media/16bf6867f9e91cd1381e6f90d2949bb1.jpeg)![2](media/f59d4877bc002ef3a173ef2f3e042910.jpeg)![3](media/e9f8630c8de6c1b6141a430badf865db.jpeg)
 
-#### Step 5: Install the Servo Platform
+ Step 5: Install the Servo Platform
 
 Prepare the parts as follows:
 
@@ -3227,15 +3227,15 @@ delay((20 - pulsewidth / 1000)); // the cycle is 20ms, the low level last for th
 }
 ```
 
-![超声波](media/9d29c7f9af30af65704c08d71eda3072.png)
+![](media/9d29c7f9af30af65704c08d71eda3072.png)
 
-![IMG_256](media/2a699a839b28414fc3f4c2e290f90384.png)
+![](media/2a699a839b28414fc3f4c2e290f90384.png)
 
 <span style="color: rgb(255, 76, 65);">Note: </span>You can find M1.2\*5 Screws inside the bag of Plastic Platform
 
-![%}_ZCT\~2%4IIRCYCLSCJQ%C](media/67bf78a0c063743de833674c9ca9b25d.png)
+![](media/67bf78a0c063743de833674c9ca9b25d.png)
 
-#### Step 6: Install Sensors and Boards
+ Step 6: Install Sensors and Boards
 
 Prepare the parts as follows:
 
@@ -3251,25 +3251,27 @@ Prepare the parts as follows:
 
 -   Bluetooth Module \*1
 
-![4](media/1beac6059f40b6eca748fc6dca13efaf.jpeg)![7](media/9a5d6f464a4c682caa0edd65b5b573ae.jpeg)![8](media/51b702d905ef099b80984b7a36e5486f.jpeg)![9](media/298d2464b13d685888746d8bc68c3a99.jpeg)![10](media/2573f2ee9a26a451278c31f4bb6e3524.jpeg)
+![](media/1beac6059f40b6eca748fc6dca13efaf.jpeg)
+![](media/9a5d6f464a4c682caa0edd65b5b573ae.jpeg)
+![](media/51b702d905ef099b80984b7a36e5486f.jpeg)
+![](media/298d2464b13d685888746d8bc68c3a99.jpeg)
+![](media/2573f2ee9a26a451278c31f4bb6e3524.jpeg)
 
-#### Step 7: Hook-up Guide
+ Step 7: Hook-up Guide
 
-![C:\\Users\\Admin\\Desktop\\KS0428接线\\ks0428 电机接线.jpgks0428
-电机接线](media/d35ffe6c0c275548f40bcafb42a93da1.jpeg)
+![](media/d35ffe6c0c275548f40bcafb42a93da1.jpeg)
 
-![C:\\Users\\Admin\\Desktop\\KS0428接线\\左电机-2.jpg左电机-2](media/9e02d1246e5ee76f004bba18685069fe.jpeg)
+![](media/9e02d1246e5ee76f004bba18685069fe.jpeg)
 
-![C:\\Users\\Admin\\Desktop\\KS0428接线\\右电机.jpg右电机](media/dda62c2ba6d1e994f8029339c249e12e.jpeg)
+![](media/dda62c2ba6d1e994f8029339c249e12e.jpeg)
 
-![C:\\Users\\Admin\\Desktop\\KS0428接线\\电池盒-2.jpg电池盒-2](media/efa2b5b60a43cbdb7b06abeb543e35e5.jpeg)
+![](media/efa2b5b60a43cbdb7b06abeb543e35e5.jpeg)
 
-![C:\\Users\\Admin\\Desktop\\KS0428接线\\屏幕截图 2021-03-29 142503.jpg屏幕截图
-2021-03-29 142503](media/2581b78ddf53a9d94655bf09a503aaaf.jpeg)
+![](media/2581b78ddf53a9d94655bf09a503aaaf.jpeg)
 
-#### Step 8: Wire Up LED Panel
+ Step 8: Wire Up LED Panel
 
-![C:\\Users\\Admin\\Desktop\\KS0428接线\\矩阵LED-1.jpg矩阵LED-1](media/979e42393d123e86427aba670300740e.jpeg)![C:\\Users\\Admin\\Desktop\\KS0428接线\\矩阵LED.jpg矩阵LED](media/2394590b9f127167cdbce26c939afd91.jpeg)![C:\\Users\\Admin\\Desktop\\KS0428接线\\矩阵LED-2.jpg矩阵LED-2](media/87f1ff9241f145316d04a4072ba45df0.jpeg)
+![](media/979e42393d123e86427aba670300740e.jpeg)![](media/2394590b9f127167cdbce26c939afd91.jpeg)![](media/87f1ff9241f145316d04a4072ba45df0.jpeg)
 
 | LED Panel                                                                                                     | V5 Sensor Shield                                                                                                  |
 |---------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------|
@@ -3277,57 +3279,56 @@ Prepare the parts as follows:
 | VCC                                                                                                           | +(VCC)                                                                                                            |
 | SDA                                                                                                           | SDA                                                                                                               |
 | SCL                                                                                                           | SCL                                                                                                               |
-| ![C:\\Users\\Admin\\Desktop\\KS0428接线\\矩阵LED-1.jpg矩阵LED-1](media/979e42393d123e86427aba670300740e.jpeg) | ![C:\\Users\\Admin\\Desktop\\KS0428接线\\矩阵LED接线.jpg矩阵LED接线](media/a17825552bd0275e895c66be0b2a3efe.jpeg) |
+| ![](media/979e42393d123e86427aba670300740e.jpeg) | ![](media/a17825552bd0275e895c66be0b2a3efe.jpeg) |
 
-#### Step 9: Install all parts of Acrylic plate
+ Step 9: Install all parts of Acrylic plate
 
-![30](media/5bf9cf95040ef56217c2a5a77f059eed.png)
+![](media/5bf9cf95040ef56217c2a5a77f059eed.png)
 
-![C:\\Users\\Admin\\Desktop\\KS0428接线\\红外接收.jpg红外接收](media/fc4ff9fa6898d37c816a0c23dbd7efed.jpeg)
+![](media/fc4ff9fa6898d37c816a0c23dbd7efed.jpeg)
 
 ![](media/fa285243c644ca7481c947e94ddb8bd8.png)
 
-![31](media/30d77c9f512c64d65352e049b134f7c0.png)
+![](media/30d77c9f512c64d65352e049b134f7c0.png)
 
-![C:\\Users\\Admin\\Desktop\\KS0428接线\\左光敏.jpg左光敏](media/17a7c2181ccedd6fc6995f1b09276a9b.jpeg)
+![](media/17a7c2181ccedd6fc6995f1b09276a9b.jpeg)
 
-![C:\\Users\\Admin\\Desktop\\KS0428接线\\右光敏.jpg右光敏](media/e791938575d9f5ce64437a91b5b62ed9.jpeg)
+![](media/e791938575d9f5ce64437a91b5b62ed9.jpeg)
 
 ![](media/359345b00db31ba06827e98c1087ad42.png)
 
-![32](media/6385938690deb8eb33763951019169c5.png)
+![](media/6385938690deb8eb33763951019169c5.png)
 
-![Q\~PENE12H_OT8YNLMG](media/ac0f66f45148fc48d5bca4a208b2b384.png)
+![](media/ac0f66f45148fc48d5bca4a208b2b384.png)
 
-![RWRX_I3@Y50R_\`HDQKVLC@6](media/316ab1f1dc16a1178b78fa6c01508357.png)
+![](media/316ab1f1dc16a1178b78fa6c01508357.png)
 
-![C:\\Users\\Admin\\Desktop\\KS0428接线\\屏幕截图 2021-03-26 085002.jpg屏幕截图
-2021-03-26 085002](media/466f5502689d16c6e59963a542d2a59e.jpeg)
+![](media/466f5502689d16c6e59963a542d2a59e.jpeg)
 
-![33](media/78a6fe318789e9b9bf7f1af349c1bb70.jpeg)
+![](media/78a6fe318789e9b9bf7f1af349c1bb70.jpeg)
 
 ![](media/78dd3d5dfe9902fc82acb8dc83d63dee.png)
 
-#### Step 10: Tank Robot
+ Step 10: Tank Robot
 
 <span style="color: rgb(255, 76, 65);">Note:</span> Remove the Bluetooth module before uploading test code. Otherwise, you will fail to upload test code.
 
-![KS0428](media/f89eeea3bebb72d7a0829faed1774e22.png)
+![](media/f89eeea3bebb72d7a0829faed1774e22.png)
 
 ### Multi-purpose Robot Car
 
  ![](media/33587ca7fd70c974ea145c25349fd98d.png)
 
-####   **Description**
+   **Description**
 
 In the previous projects, the tank car only performs a single function. However, in this lesson, we integrate all of its functions to control smart car via Bluetooth control.
 
 Here is a simple flow chart of multi-purpose robot car for your reference.
 ![](media/3f050566dd9628e61d1b948fe3010db7.png)
 
-####   **Connection Diagram**
+   **Connection Diagram**
 
-![C:\\Users\\Admin\\Desktop\\KS0428接线\\全.jpg全](media/5740239ab7c8146def446e410d24de58.jpeg)
+![](media/5740239ab7c8146def446e410d24de58.jpeg)
 
 <span style="color: rgb(255, 76, 65);">Attention：</span>Confirm that every component is connected.
 
@@ -3395,7 +3396,7 @@ Wire-up Guide:
 ![](media/d96d3af2404efd9c330e9b6b99ecdc96.png)
 ![](media/76aeed2f0975903e858486d7d20b58ea.png)
 
-#### **Test Code**
+ **Test Code**
 
 ```c
 /*
@@ -3580,7 +3581,7 @@ void Car_T_right()
 }
 ```
 
-####   **Test Result**
+   **Test Result**
 
 <span style="color: rgb(255, 76, 65);">Note: </span>Remove the Bluetooth module before uploading test code. Otherwise, you will fail to upload test code. Reconnect Bluetooth module after uploading test code
 
