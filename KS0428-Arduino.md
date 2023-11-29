@@ -1345,7 +1345,7 @@ The code is for reading the received signal, and we also need a stuff to send si
 
 Then we need to download the APP.
 
-#   **iOS system**
+   **iOS system**
 
 **Note: Allow APP to access “location” in settings of your cellphone when connecting to Bluetooth module. Otherwise, Bluetooth may not be connected.**
 
@@ -1353,7 +1353,7 @@ Enter APP STORE to search **BLE Scanner 4.0, then download it.**
 
 ![](media/17adf8dc7318b8104373f0d518398279.png)
 
-#   **Android system**
+   **Android system**
 
 Enter [Google Play](https://developer.android.google.cn/distribute?hl=zh-cn) to find out **BLE Scanner, then download.**
 
