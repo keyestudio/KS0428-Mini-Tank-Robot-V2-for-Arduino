@@ -2,11 +2,11 @@
 
 ![KS0428](media/40251bc51995d9dcddc5ef40e93ad7cd.png)
 
-## Read me frist
+# Read me frist
 
  **Download the APP, Code and library from the link: <https://fs.keyestudio.com/KS0428>**
 
-## 1.Introduction
+# 1.Introduction
 
 Nowadays, technological education such as VR, kids’ programming, and artificial intelligence, has become a mainstream in educational industry. Thereby, people attach more importance to STEAM education.
 
@@ -20,7 +20,7 @@ It can perform multiple functions like obstacle avoidance, IR remote control, BT
 
 Detailed 15 learning projects, from simple to complex, which guide you to build up your own smart mini tank robot and provide the basic knowledge of sensors and modules. Moreover, it is the best choice for graphical programming education.
 
-## 2.Features
+# 2.Features
 
 1.Multi-purpose function: Multi-purpose function: Obstacle avoidance, following, IR remote control, Bluetooth control, ultrasonic following and facial emoticons display.
 
@@ -34,7 +34,7 @@ Detailed 15 learning projects, from simple to complex, which guide you to build 
 
 6.Basic programming：C language code of Arduino IDE.
 
-## 3.Specification
+# 3.Specification
 
 Working voltage: 5v
 
@@ -56,7 +56,7 @@ Infrared remote control distance: 10 meters (measured)
 
 Bluetooth remote control distance: 50 meters (measured)
 
-## 4.Product List
+# 4.Product List
 
 When you get this robot kit, please make sure that all the parts listed below are delivered. Otherwise, please feel free to contact us for any missing components.
 
@@ -122,7 +122,7 @@ When you get this robot kit, please make sure that all the parts listed below ar
 
 
 
-## 5.Install Arduino IDE and Driver
+# 5.Install Arduino IDE and Driver
 
 ### Installing Arduino IDE
 
@@ -323,7 +323,7 @@ Click![](media/9c9158a5d49baa740ea2f0048f655017.png)to upload the program, uploa
 
 Upload the program successfully, the onboard LED lights on for 1s, lights off for 1s. Congratulation, you have finished the first program.
 
-## 6. How to Add Libraries?
+# 6. How to Add Libraries?
 
 **What are Libraries ?**
 
@@ -354,7 +354,7 @@ Import the library. You can find it in the include library list.
 
 Now, you import libraries successfully.
 
-## 7.Projects
+# 7.Projects
 
 The whole project begins with basic programs. Starting from simple to complex, the lessons will guide you to assemble the robot car and absorb the knowledge of electronic and machinery step by step. **If you want to start directly by installing the robot, you can skip to our [assembly-guide](https://ks0428-mini-tank-robot-v2-for-arduino.readthedocs.io/en/latest/KS0428-Arduino.html#assembly-guide).**
 
@@ -447,13 +447,13 @@ level(output 0V)
 
 We succeed in blinking LED. Next, let’s observe what LED will change if we modify pins and delay time.
 
-##### **Connection Diagram**
+#### **Connection Diagram**
 
 ![](media/5ed1c26f781c7ad71201e050f06b862c.png)
 
 We’ve altered pins and connected LED to D10.
 
-##### **Test Code**
+#### **Test Code**
 
 ```c
 /*
@@ -3046,7 +3046,7 @@ hold![Screenshot_2019-06-21-14-48-54-58](media/96f8d8acf6ae02320f69583f9a146e96.
 
 Click![Screenshot_2019-06-21-14-48-54-58](media/89977c8a260abc7a1e43348047d55ffb.png)to enable gravitational control，tap![Screenshot_2019-06-21-14-48-54-58](media/89977c8a260abc7a1e43348047d55ffb.png)again, end gravitational control. At same time,8X16 LED panel on robot car displays the corresponding pattern.
 
-## 8.The final fully functional project
+# 8.The final fully functional project
 
 ### Assembly Guide
 
@@ -3589,7 +3589,7 @@ Upload test code successfully, insert Bluetooth module, power on, and connect to
 Alright, the whole projects are finished. Please feel free to contact us if you confront some problems.
 
 
-## 9. Resources
+# 9. Resources
 
 Wiki page: <https://wiki.keyestudio.com/Main_Page>
 
