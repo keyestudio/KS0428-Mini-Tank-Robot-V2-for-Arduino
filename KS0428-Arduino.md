@@ -163,7 +163,7 @@ It contains everything needed to support the microcontroller. Simply connect it 
 
 **[https://getting-started-with-arduino.readthedocs.io](https://getting-started-with-arduino.readthedocs.io/en/latest/Arduino%20IDE%20Tutorial.html)**
 
-# 7.Projects
+# 6.Projects
 
 The whole project begins with basic programs. Starting from simple to complex, the lessons will guide you to assemble the robot car and absorb the knowledge of electronic and machinery step by step. **If you want to start directly by installing the robot, you can skip to our [assembly-guide](https://ks0428-mini-tank-robot-v2-for-arduino.readthedocs.io/en/latest/KS0428-Arduino.html#assembly-guide).**
 
@@ -2855,7 +2855,7 @@ hold![](media/96f8d8acf6ae02320f69583f9a146e96.png)，it stops.
 
 Click![](media/89977c8a260abc7a1e43348047d55ffb.png)to enable gravitational control，tap![](media/89977c8a260abc7a1e43348047d55ffb.png)again, end gravitational control. At same time,8X16 LED panel on robot car displays the corresponding pattern.
 
-# 8.The final fully functional project
+# 7.The final fully functional project
 
 ### Assembly Guide
 
@@ -3399,7 +3399,7 @@ Upload test code successfully, insert Bluetooth module, power on, and connect to
 Alright, the whole projects are finished. Please feel free to contact us if you confront some problems.
 
 
-# 9. Resources
+# 8. Resources
 
 Wiki page: <https://wiki.keyestudio.com/Main_Page>
 
