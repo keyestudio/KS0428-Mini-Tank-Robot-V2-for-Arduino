@@ -3399,7 +3399,7 @@ Upload test code successfully, insert Bluetooth module, power on, and connect to
 Alright, the whole projects are finished. Please feel free to contact us if you confront some problems.
 
 
-# 8. Resources
+# 8.Resources
 
 Wiki page: <https://wiki.keyestudio.com/Main_Page>
 
